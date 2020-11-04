@@ -2,11 +2,11 @@
 
 * **Online URL**: TODO
 * **Team members**:
-  * Contact person: TODO@andrew.cmu.edu
-  * TODO@andrew.cmu.edu
-  * TODO@andrew.cmu.edu
-  * TODO@andrew.cmu.edu
-* **Track**: TODO (one of Narrative, Model, or Interactive Visualization/Application)
+  * Contact person: Xiaoyu Sun (seansun@andrew.cmu.edu)
+  * Liyun Tu (liyunt@andrew.cmu.edu)
+  * Shengli Zhu (shengliz@andrew.cmu.edu)
+  * Xi Chen (xc3@andrew.cmu.edu)
+* **Track**: Narrative
 
 ## Work distribution
 
