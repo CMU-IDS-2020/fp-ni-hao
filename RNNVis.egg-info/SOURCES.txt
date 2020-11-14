@@ -1,0 +1,10 @@
+README.md
+setup.py
+RNNVis/__init__.py
+RNNVis/config.py
+RNNVis/model.py
+RNNVis.egg-info/PKG-INFO
+RNNVis.egg-info/SOURCES.txt
+RNNVis.egg-info/dependency_links.txt
+RNNVis.egg-info/requires.txt
+RNNVis.egg-info/top_level.txt
