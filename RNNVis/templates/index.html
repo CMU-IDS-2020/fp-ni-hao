@@ -21,16 +21,194 @@
   <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
   <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #C4BDAC;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+    }
 
+    .sidenav a:hover {
+      color: #575454;
+    }
+    
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 18px; /* Increased text to enable scrolling */
+      padding: 0px 0px;
+      background-color: #f4eee1;
+      color: #555454;
+    }
+    
+    body{
+      background-color: #f4eee1;
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    .button {
+      background-color: #8E9AAF;
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      text-align: center;
+      font-size: 18px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button:hover {opacity: 1}
+
+    .user_table tr {background: #CBC0D3;}
+    .user_table tr:nth-of-type(2) {background: #EFD3D7;}
+    .model_table tr {
+      background: white;
+    }
+    .user_table td {
+      padding: 15px;
+    }
+    .model_table td {
+      padding: 15px;
+    }
+    table {opacity: 0.8}
+  </style>
 </head>
 
 <body>
 
-
-
-<div id="main">
-Test!!!
+<div class="sidenav">
+  <a href="#">Source of Happiness</a>
+  <hr class="rounded">
+  <a href="#">Sentiment Detection</a>
+  <hr class="rounded">
+  <a href="#">WordCloud</a>
+  <hr class="rounded">
 </div>
 
+<div id="main" class="main">
+  <h2> Sentence </h2>
+  
+  <table class="user_table">
+    <tr>
+      <td width="900px">
+        <h3> User Input: </h3>
+        <button class="button" onclick="next_sent()">switch </button>
+
+        <p> {{sentence}} </p>
+        <p> Your current selected words is: <span id="selected_word"></span></p>
+      </td>
+      <td width="350px">
+        <p> <b>Which source of happiness?</b> </p>
+        <input type="radio" id="bonding" name="Source" value="one">
+        <label for="one">Bonding</label><br>
+        <input type="radio" id="leisure" name="Source" value="two">
+        <label for="two">Leisure</label><br>
+        <input type="radio" id="affection" name="Source" value="three">
+        <label for="three">Affection</label><br>
+        <input type="radio" id="enjoy_mo" name="Source" value="four">
+        <label for="four">Enjoy the moment</label><br>
+        <input type="radio" id="achievement" name="Source" value="five">
+        <label for="five">Achievement</label><br>
+        <input type="radio" id="nature" name="Source" value="six">
+        <label for="six">Nature</label><br>
+        <input type="radio" id="exercise" name="Source" value="seven">
+        <label for="seven">Exercise</label><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <p><b> Are you satisfied with your choices? </b></p>
+        <input type="radio" id="yes" name="Choice" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="Choice" value="no">
+        <label for="no">No</label><br>
+        <input class="button" type="submit" value="submit">
+      </td>
+    </tr>
+  </table>
+  <table class="model_table">
+    <tr>
+      <td width = "400px">
+        <h3> Model Output: </h3>
+        <img src="{{word_weight}}" width="400">
+      </td>
+      <td width = "850px">
+        <img src="{{pred_prob}}" width="250">
+        <p> {{explanation}} </p>
+      </td>
+    </tr>
+  </table>
+    
+</div>
 </body>
+
+
+
+
+
+<script>
+  var words = $( "p" ).first().text().split( /\s+/ );
+  var text = words.join( "</span> <span>" );
+  $( "p" ).first().html( "<span>" + text + "</span>" );
+  $( "span" ).on( "click", function() {
+    if (this.style.backgroundColor == "yellow"){
+      $( this ).css( "background-color", "" );
+    }
+    else{
+      $( this ).css( "background-color", "yellow" );
+    }
+    
+    var selection = window.getSelection();
+    if (!selection || selection.rangeCount < 1) return true;
+    var range = selection.getRangeAt(0);
+    var node = selection.anchorNode;
+    var word_regexp = /^\w*$/;
+
+    // Extend the range backward until it matches word beginning
+    while ((range.startOffset > 0) && range.toString().match(word_regexp)) {
+      range.setStart(node, (range.startOffset - 1));
+    }
+    // Restore the valid word match after overshooting
+    if (!range.toString().match(word_regexp)) {
+      range.setStart(node, range.startOffset + 1);
+    }
+
+    // Extend the range forward until it matches word ending
+    while ((range.endOffset < node.length) && range.toString().match(word_regexp)) {
+      range.setEnd(node, range.endOffset + 1);
+    }
+    // Restore the valid word match after overshooting
+    if (!range.toString().match(word_regexp)) {
+      range.setEnd(node, range.endOffset - 1);
+    }
+
+    var word = range.toString();
+    // alert(word);
+    document.getElementById("selected_word").innerHTML = word;
+  });
+</script>
+
 </html>
