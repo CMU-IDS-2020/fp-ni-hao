@@ -16,5 +16,9 @@ setup(
         'pytest==3.8.0',
         'requests==2.21.0',
         'sh==1.12.14',
+        'sklearn',
+        'lime',
+        'pandas',
+        'matplotlib'
     ],
 )

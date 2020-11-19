@@ -1,23 +1,7 @@
-CREATE TABLE users(
-  username VARCHAR(20) NOT NULL,
-  fullname VARCHAR(40) NOT NULL,
-  incorporation VARCHAR(128) NOT NULL,
-  email VARCHAR(40) NOT NULL,
-  filename VARCHAR(64) NOT NULL,
-  password VARCHAR(256) NOT NULL,
-  occupation VARCHAR(20) NOT NULL,
-  created TIMESTAMP CURRENT_TIMESTAMP,
-  isvip INTEGER NOT NULL,
-  PRIMARY KEY(username)
+CREATE TABLE sentence(
+  index int NOT NULL,
+  moment VARCHAR(256) NOT NULL,
+  PRIMARY KEY(index)
 );
 
-
-CREATE TABLE following(
-  username1 VARCHAR(20),
-  username2 VARCHAR(20),
-  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (username1, username2),
-  FOREIGN KEY (username1) REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (username2) REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE
-);
 

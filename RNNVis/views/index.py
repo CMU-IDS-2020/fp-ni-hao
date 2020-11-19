@@ -13,8 +13,16 @@ import flask
 from flask import send_from_directory
 from flask import url_for
 import RNNVis
+from RNNVis import lr_model, lr_vectorizer, dataset
 import random
 from datetime import datetime
+import pickle
+import sklearn
+from sklearn.pipeline import Pipeline, make_pipeline
+import lime
+from lime import lime_text
+from lime.lime_text import LimeTextExplainer
+import matplotlib as plt
 
 
 def query_db_1(query, args=(), one=False):
@@ -40,15 +48,28 @@ def uploaded_file(filename):
 
 @RNNVis.app.route('/', methods=['GET', 'POST'])
 def show_index():
-    # flask.session['username'] = "cheney"# Test only
     """Display / route."""
-    context = {}
-    if 'username' not in flask.session:
-        # return flask.redirect(flask.url_for('login'))
-        context['logname'] = 'none'
-        pass
-    context['sentence'] = 'Someone on a forum out there suggested that the reason the trailing space is added to the highlighted word is because Microsoft Windows assumes you’re going to be pasting that word somewhere else in your paragraph and that you’ll likely need that space.'
+    context = {} 
+    labels = ['achievement','affection','bonding','enjoy the moment','exercise','leisure','nature']
+    labeldict = {'achievement': 0,'affection': 1,'bonding': 2,'enjoy the moment': 3,'exercise': 4, 'leisure': 5,'nature': 6}
+    global lr_model
+    global lr_vectorizer
+    global dataset
+    random.seed(10)
+    index = random.randint(0,14124)
+    sentence = [dataset["cleaned_hm"][index]]
+    pred = lr_model.predict(lr_vectorizer.transform(sentence))
+    c = make_pipeline(lr_vectorizer, lr_model)
+    explainer = LimeTextExplainer(class_names=labels)
+    exp = explainer.explain_instance(sentence[0], c.predict_proba, labels=[0,1,2,3,4,5,6])
+    word_weight = exp.as_list(label=labeldict[pred[0]])
+    pred_prob = lr_model.predict_proba(lr_vectorizer.transform(sentence))[0]
+    pred_prob = [(labels[i], pred_prob[i]) for i in range(7)]
+    pred_prob = sorted(pred_prob, key = lambda x: x[1], reverse = True)
+    context['weight_test'] = word_weight
+    context['prob_test'] = pred_prob
+    context['sentence'] = sentence[0]
     context['word_weight'] = url_for('uploaded_file', filename='affection_sample.png')
     context['pred_prob'] = url_for('uploaded_file', filename='prediction_prob.png')
-    context['explanation'] = "Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as xxx. "
+    context['explanation'] = "Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as "+ str(pred[0])+". "
     return flask.render_template("index.html", **context)
