@@ -4,7 +4,6 @@ import flask
 import RNNVis
 
 
-
 def dict_factory(cursor, row):
     """Convert database row objects to a dictionary.
 

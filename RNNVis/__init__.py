@@ -1,8 +1,15 @@
 import flask
+import pickle
+import pickle
+import sklearn
+import pandas as pd
 
 # app is a single object used by all the code modules in this package
 app = flask.Flask(__name__)  # pylint: disable=invalid-name
 
+lr_model = pickle.load(open('RNNVis/static/model/model.pkl', 'rb'))
+lr_vectorizer = pickle.load(open('RNNVis/static/model/vectorizer.pkl', 'rb'))
+dataset = pd.read_csv('RNNVis/static/model/cleaned.csv')
 # Read settings from config module (produck/config.py)
 app.config.from_object('RNNVis.config')
 
