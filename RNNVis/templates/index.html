@@ -108,12 +108,10 @@
   <hr class="rounded">
   <a href="#">Sentiment Detection</a>
   <hr class="rounded">
-  <a href="#">WordCloud</a>
-  <hr class="rounded">
 </div>
 
 <div id="main" class="main">
-  <h2> Sentence </h2>
+  <h2> Explaining Sentiment Analysis </h2>
   
   <table class="user_table">
     <tr>
@@ -150,24 +148,22 @@
         <input type="radio" id="no" name="Choice" value="no">
         <label for="no">No</label><br>
         <input class="button" type="submit" value="submit">
-        <div id = "test2">
-        </div>
       </td>
     </tr>
   </table>
   <table class="model_table">
     <tr>
-      <td width = "400px">
+      <td width = "600px;" style="vertical-align: top;">
         <h3> Model Output: </h3>
-        <!-- <img src="{{word_weight}}" width="400"> -->
+        <div id = "test2">
+        </div>
+        <p> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>. </p>
+      </td>
+      <td width = "650px">
         <div id = "lime_explanation">
         </div>
-      </td>
-      <td width = "850px">
-        <!-- <img src="{{pred_prob}}" width="250"> -->
         <div id = "lime_predict_prob">
-        </div>
-        <p> {{explanation}} </p>
+        </div>       
       </td>
     </tr>
   </table>
@@ -260,8 +256,8 @@
   $(document).ready(function(){
     $("#lime_predict_prob").load("static/model/lime.html", function(){
             $('.text_div').detach().prependTo('#test2');
-            $('.text_div h3').html("Sentence with highlighted weight");
-            $('.explanation').detach().prependTo('#lime_explanation');
+            $('.text_div h3').html("");
+            // $('.explanation').detach().prependTo('#lime_explanation');
     });
   });
   var words = $( "p" ).first().text().split( /\s+/ );

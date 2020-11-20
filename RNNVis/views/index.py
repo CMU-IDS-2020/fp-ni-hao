@@ -74,5 +74,5 @@ def show_index():
     context['sentence'] = dataset["cleaned_hm"][index]
     # context['word_weight'] = url_for('uploaded_file', filename='affection_sample.png')
     # context['pred_prob'] = url_for('uploaded_file', filename='prediction_prob.png')
-    context['explanation'] = "Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as "+ str(pred[0])+". "
+    context['explanation'] = str(pred[0])
     return flask.render_template("index.html", **context)
