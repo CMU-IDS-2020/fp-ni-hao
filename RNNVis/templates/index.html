@@ -20,6 +20,8 @@
   <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
   <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
   <style>
     body {
       font-family: "Lato", sans-serif;
@@ -91,6 +93,9 @@
     }
     .model_table td {
       padding: 15px;
+    }
+    .sentences {
+      background: white;
     }
     table {opacity: 0.8}
   </style>
@@ -166,6 +171,83 @@
       </td>
     </tr>
   </table>
+
+  <select id="wordcloud-dropdown" class="button" onchange="wordcloud();">
+    <option selected="selected">Show word cloud</option>
+    <option value="bonding.csv">bonding</option>
+    <option value="leisure.csv">Leisure</option>
+    <option value="affection.csv">Affection</option>
+  </select>
+  <div id="wordcloud">
+    <!-- add hover effect-->
+    <style>
+      text:hover {
+        opacity: .7 !important;
+      }
+    </style>
+    <script>
+      var width = 700,
+        height = 500;
+
+      function wordcloud(file) {
+        var file_select = document.getElementById("wordcloud-dropdown");
+        var file = file_select[file_select.selectedIndex].value
+
+        d3.csv(file, function (data) {
+          // document.write(data[0]);
+
+          var words = data
+            .map(function (d) { return { text: d.word, size: +d.size }; })
+            .slice(0, 100);
+
+          d3.layout.cloud()
+            .size([width, height])
+            .words(words)
+            .padding(0)        //space between words
+            // .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .fontSize(function (d) { return d.size; })      // font size of words
+            .font('Impact')
+            .on("end", draw)
+            .start();
+        });
+
+        function draw(words) {
+          var box = d3.select('#sentences').append("g").attr("transform", "translate(300,50)");
+          box.append("rect")
+          .attr("height", 50)
+          .attr("width", 100)
+          .style("stroke","black")
+          .style("fill", "#80d6c7")
+          .style("stroke-width", "2px");
+
+          var svg = d3.select("#wordcloud").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+          
+            svg.append("g")
+            .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function (d) { return d.size; })
+            .style("fill", "#69b3a2")
+            .attr("text-anchor", "middle")
+            .style("font-family", "Impact")
+            .attr("transform", function (d) {
+              return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function (d) { return d.text; })
+            .on("click", function (d) {
+              box.selectAll("text").remove();
+              box.append("text")
+              .text("10 sentences that contain \"" + d.text + "\" will be shown here...")
+            });
+        }
+      }
+    </script>
+  </div>
+  <div id="sentences" class="sentences">
+  </div>
 </div>
 
 </body>
