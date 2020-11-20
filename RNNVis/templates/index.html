@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>RNNVis</title>
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/index.css')}}">
@@ -19,14 +20,16 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-  <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+  <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
   <link href="{{url_for('static', filename = 'lime_report.html')}}" rel="import" />
   <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
   <style>
     body {
       font-family: "Lato", sans-serif;
     }
-    
+
     .sidenav {
       height: 100%;
       width: 160px;
@@ -38,7 +41,7 @@
       overflow-x: hidden;
       padding-top: 20px;
     }
-    
+
     .sidenav a {
       padding: 6px 8px 6px 16px;
       text-decoration: none;
@@ -50,21 +53,29 @@
     .sidenav a:hover {
       color: #575454;
     }
-    
+
     .main {
-      margin-left: 160px; /* Same as the width of the sidenav */
-      font-size: 18px; /* Increased text to enable scrolling */
+      margin-left: 160px;
+      /* Same as the width of the sidenav */
+      font-size: 18px;
+      /* Increased text to enable scrolling */
       padding: 0px 0px;
       background-color: #f4eee1;
       color: #555454;
     }
-    
-    body{
+
+    body {
       background-color: #f4eee1;
     }
+
     @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
     }
 
     .button {
@@ -81,88 +92,106 @@
       text-decoration: none;
       cursor: pointer;
     }
-    .button:hover {opacity: 1}
 
-    .user_table tr {background: #CBC0D3;}
-    .user_table tr:nth-of-type(2) {background: #EFD3D7;}
+    .button:hover {
+      opacity: 1
+    }
+
+    .user_table tr {
+      background: #CBC0D3;
+    }
+
+    .user_table tr:nth-of-type(2) {
+      background: #EFD3D7;
+    }
+
     .model_table tr {
       background: white;
     }
+
     .user_table td {
       padding: 15px;
     }
+
     .model_table td {
       padding: 15px;
     }
-    table {opacity: 0.8}
+
+    table {
+      opacity: 0.8
+    }
+
+    .sentences {
+      background: white;
+    }
   </style>
 </head>
 
 <body>
 
-<div class="sidenav">
-  <a href="#">Source of Happiness</a>
-  <hr class="rounded">
-  <a href="#">Sentiment Detection</a>
-  <hr class="rounded">
-  <a href="#">WordCloud</a>
-  <hr class="rounded">
-</div>
+  <div class="sidenav">
+    <a href="#">Source of Happiness</a>
+    <hr class="rounded">
+    <a href="#">Sentiment Detection</a>
+    <hr class="rounded">
+    <a href="#">WordCloud</a>
+    <hr class="rounded">
+  </div>
 
-<div id="main" class="main">
-  <h2> Sentence </h2>
-  
-  <table class="user_table">
-    <tr>
-      <td width="900px">
-        <h3> User Input: </h3>
-        <button class="button" onclick="next_sent()">switch </button>
+  <div id="main" class="main">
+    <h2> Sentence </h2>
 
-        <p> {{sentence}} </p>
-        <p> Your current selected words is: <span id="selected_word"></span></p>
-      </td>
-      <td width="350px">
-        <p> <b>Which source of happiness?</b> </p>
-        <input type="radio" id="bonding" name="Source" value="one">
-        <label for="one">Bonding</label><br>
-        <input type="radio" id="leisure" name="Source" value="two">
-        <label for="two">Leisure</label><br>
-        <input type="radio" id="affection" name="Source" value="three">
-        <label for="three">Affection</label><br>
-        <input type="radio" id="enjoy_mo" name="Source" value="four">
-        <label for="four">Enjoy the moment</label><br>
-        <input type="radio" id="achievement" name="Source" value="five">
-        <label for="five">Achievement</label><br>
-        <input type="radio" id="nature" name="Source" value="six">
-        <label for="six">Nature</label><br>
-        <input type="radio" id="exercise" name="Source" value="seven">
-        <label for="seven">Exercise</label><br>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <p><b> Are you satisfied with your choices? </b></p>
-        <input type="radio" id="yes" name="Choice" value="yes">
-        <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="Choice" value="no">
-        <label for="no">No</label><br>
-        <input class="button" type="submit" value="submit">
-      </td>
-    </tr>
-  </table>
-  <table class="model_table">
-    <tr>
-      <td width = "400px">
-        <h3> Model Output: </h3>
-        <img src="{{word_weight}}" width="400">
-      </td>
-      <td width = "850px">
-        <img src="{{pred_prob}}" width="250">
-        <p> {{explanation}} </p>
-      </td>
-    </tr>
-  </table>
-  <!-- <table class="model_table">
+    <table class="user_table">
+      <tr>
+        <td width="900px">
+          <h3> User Input: </h3>
+          <button class="button" onclick="next_sent()">switch </button>
+
+          <p> {{sentence}} </p>
+          <p> Your current selected words is: <span id="selected_word"></span></p>
+        </td>
+        <td width="350px">
+          <p> <b>Which source of happiness?</b> </p>
+          <input type="radio" id="bonding" name="Source" value="one">
+          <label for="one">Bonding</label><br>
+          <input type="radio" id="leisure" name="Source" value="two">
+          <label for="two">Leisure</label><br>
+          <input type="radio" id="affection" name="Source" value="three">
+          <label for="three">Affection</label><br>
+          <input type="radio" id="enjoy_mo" name="Source" value="four">
+          <label for="four">Enjoy the moment</label><br>
+          <input type="radio" id="achievement" name="Source" value="five">
+          <label for="five">Achievement</label><br>
+          <input type="radio" id="nature" name="Source" value="six">
+          <label for="six">Nature</label><br>
+          <input type="radio" id="exercise" name="Source" value="seven">
+          <label for="seven">Exercise</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p><b> Are you satisfied with your choices? </b></p>
+          <input type="radio" id="yes" name="Choice" value="yes">
+          <label for="yes">Yes</label><br>
+          <input type="radio" id="no" name="Choice" value="no">
+          <label for="no">No</label><br>
+          <input class="button" type="submit" value="submit">
+        </td>
+      </tr>
+    </table>
+    <table class="model_table">
+      <tr>
+        <td width="400px">
+          <h3> Model Output: </h3>
+          <img src="{{word_weight}}" width="400">
+        </td>
+        <td width="850px">
+          <img src="{{pred_prob}}" width="250">
+          <p> {{explanation}} </p>
+        </td>
+      </tr>
+    </table>
+    <!-- <table class="model_table">
     <tr>
       <td width = "400px">
         <h3> Test: </h3>
@@ -173,27 +202,99 @@
       </td>
     </tr>
   </table> -->
+    <!-- <button class="button" onclick="wordcloud('bonding.csv');">Show word cloud</button> -->
+    <select id="wordcloud-dropdown" class="button" onchange="wordcloud();">
+      <option selected="selected">Show word cloud</option>
+      <option value="bonding.csv">bonding</option>
+      <option value="leisure.csv">Leisure</option>
+      <option value="affection.csv">Affection</option>
+    </select>
+    <div id="wordcloud">
+      <!-- add hover effect-->
+      <style>
+        text:hover {
+          opacity: .7 !important;
+        }
+      </style>
+      <script>
+        var width = 700,
+          height = 500;
 
-</div>
+        function wordcloud(file) {
+          var file_select = document.getElementById("wordcloud-dropdown");
+          var file = file_select[file_select.selectedIndex].value
+
+          d3.csv(file, function (data) {
+            // document.write(data[0]);
+
+            var words = data
+              .map(function (d) { return { text: d.word, size: +d.size }; })
+              .slice(0, 100);
+
+            d3.layout.cloud()
+              .size([width, height])
+              .words(words)
+              .padding(0)        //space between words
+              // .rotate(function() { return ~~(Math.random() * 2) * 90; })
+              .fontSize(function (d) { return d.size; })      // font size of words
+              .font('Impact')
+              .on("end", draw)
+              .start();
+          });
+
+          function draw(words) {
+            var box = d3.select('#sentences').append("g").attr("transform", "translate(300,50)");
+            box.append("rect")
+            .attr("height", 50)
+            .attr("width", 100)
+            .style("stroke","black")
+            .style("fill", "#80d6c7")
+            .style("stroke-width", "2px");
+
+            var svg = d3.select("#wordcloud").append("svg")
+              .attr("width", width)
+              .attr("height", height);
+            
+              svg.append("g")
+              .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")")
+              .selectAll("text")
+              .data(words)
+              .enter().append("text")
+              .style("font-size", function (d) { return d.size; })
+              .style("fill", "#69b3a2")
+              .attr("text-anchor", "middle")
+              .style("font-family", "Impact")
+              .attr("transform", function (d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+              })
+              .text(function (d) { return d.text; })
+              .on("click", function (d) {
+                box.selectAll("text").remove();
+                box.append("text")
+                .text("10 sentences that contain \"" + d.text + "\" will be shown here...")
+              });
+          }
+        }
+      </script>
+    </div>
+    <div id="sentences" class="sentences">
+    </div>
+  </div>
 
 </body>
 
-
-
-
-
 <script>
-  var words = $( "p" ).first().text().split( /\s+/ );
-  var text = words.join( "</span> <span>" );
-  $( "p" ).first().html( "<span>" + text + "</span>" );
-  $( "span" ).on( "click", function() {
-    if (this.style.backgroundColor == "yellow"){
-      $( this ).css( "background-color", "" );
+  var words = $("p").first().text().split(/\s+/);
+  var text = words.join("</span> <span>");
+  $("p").first().html("<span>" + text + "</span>");
+  $("span").on("click", function () {
+    if (this.style.backgroundColor == "yellow") {
+      $(this).css("background-color", "");
     }
-    else{
-      $( this ).css( "background-color", "yellow" );
+    else {
+      $(this).css("background-color", "yellow");
     }
-    
+
     var selection = window.getSelection();
     if (!selection || selection.rangeCount < 1) return true;
     var range = selection.getRangeAt(0);
@@ -223,5 +324,6 @@
     document.getElementById("selected_word").innerHTML = word;
   });
 </script>
+
 
 </html>
