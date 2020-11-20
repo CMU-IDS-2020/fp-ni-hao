@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divRIB3Y8PU8JZMU3J"></div>
+        <div class="lime top_div" id="top_divGWZTUECFHTSGWIC"></div>
         
         <script>
-        var top_div = d3.select('#top_divRIB3Y8PU8JZMU3J').classed('lime top_div', true);
+        var top_div = d3.select('#top_divGWZTUECFHTSGWIC').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.9936703447080559, 0.0008920153810984996, 0.0007019737045123355, 0.001563427094819528, 0.0008238410089828275, 0.002189769730029792, 0.00015862837250086204]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.08283320305435772, 0.05936488803790685, 0.08484609409969457, 0.5658919241086071, 0.006680568561726612, 0.05894965745336586, 0.1414336646843411]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["project", 0.08298066309360869], ["able", 0.06785753632363788], ["work", 0.05703785928165705], ["at", 0.017035343086021552], ["important", -0.014015567162769381], ["finish", 0.013493580526197322], ["was", 0.013135974346229477], ["i", 0.006299207873179016], ["an", 0.0051709691444764986], ["to", 0.0015595419574096834]], 0, exp_div);
+                exp.show([["breakfast", 0.47573741283101734], ["we", -0.22783766674694164], ["they", -0.16316176903570295], ["wonderful", 0.1464640961004204], ["and", -0.09754692073542655], ["were", -0.04839053034850115], ["paninis", 0.025028860111067648], ["had", -0.02377317100954893]], 3, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["project", 34, 0.08298066309360869], ["able", 6, 0.06785753632363788], ["work", 45, 0.05703785928165705], ["at", 42, 0.017035343086021552], ["important", 24, -0.014015567162769381], ["finish", 14, 0.013493580526197322], ["was", 2, 0.013135974346229477], ["i", 0, 0.006299207873179016], ["an", 21, 0.0051709691444764986], ["to", 11, 0.0015595419574096834]], 0, "i was able to finish an important project at work.", raw_div, true);
+            exp.show_raw_text([["breakfast", 7, 0.47573741283101734], ["we", 0, -0.22783766674694164], ["they", 29, -0.16316176903570295], ["wonderful", 39, 0.1464640961004204], ["and", 25, -0.09754692073542655], ["were", 34, -0.04839053034850115], ["paninis", 17, 0.025028860111067648], ["had", 3, -0.02377317100954893]], 3, "we had breakfast paninis and they were wonderful!", raw_div, true);
             
         </script>
         </body></html>

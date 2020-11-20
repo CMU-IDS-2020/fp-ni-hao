@@ -256,7 +256,8 @@
   $(document).ready(function(){
     $("#lime_predict_prob").load("static/model/lime.html", function(){
             $('.text_div').detach().prependTo('#test2');
-            $('.text_div h3').html("");
+            $('.text_div h3').html("");      
+            $(".predict_proba").before($(".explanation"))
             // $('.explanation').detach().prependTo('#lime_explanation');
     });
   });
