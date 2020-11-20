@@ -21,7 +21,7 @@
   <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v4.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+  <script src="{{url_for('static', filename = 'js/d3.layout.cloud.js')}}"></script>
   <style>
     body {
       font-family: "Lato", sans-serif;
@@ -174,7 +174,7 @@
 
   <select id="wordcloud-dropdown" class="button" onchange="wordcloud();">
     <option selected="selected">Show word cloud</option>
-    <option value="bonding.csv">bonding</option>
+    <option value= "{{url_for('static', filename = 'wordcloud/bonding.csv')}}">bonding</option>
     <option value="leisure.csv">Leisure</option>
     <option value="affection.csv">Affection</option>
   </select>
@@ -200,7 +200,7 @@
             .map(function (d) { return { text: d.word, size: +d.size }; })
             .slice(0, 100);
 
-          d3.layout.cloud()
+          d4.layout.cloud()
             .size([width, height])
             .words(words)
             .padding(0)        //space between words

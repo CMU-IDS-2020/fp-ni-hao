@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div5TYTIAV9S038DGO"></div>
+        <div class="lime top_div" id="top_div20ZCO5LQL3CL299"></div>
         
         <script>
-        var top_div = d3.select('#top_div5TYTIAV9S038DGO').classed('lime top_div', true);
+        var top_div = d3.select('#top_div20ZCO5LQL3CL299').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.8413709963648605, 0.02880217515292538, 0.007202960229654601, 0.06110471377580791, 0.008264685910333096, 0.016506911164276588, 0.03674755740214205]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.016304519092040188, 0.9741419356897804, 0.0018205946449321231, 0.004008772272592463, 0.0007438055865164216, 0.002011171939738997, 0.0009692007743994703]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["achieved", 0.47656459939990553], ["days", -0.11111670795794337], ["of", 0.09156010217505314], ["30", -0.042995219956402674], ["i", -0.0015513224178356263], ["sobriety", 0.0010750702969979967]], 0, exp_div);
+                exp.show([["mom", 0.42217134839956605], ["she", 0.24272515157362812], ["my", 0.2272540828128321], ["month", -0.07424780870799554], ["after", -0.06664838398792712], ["called", -0.04900689949370746], ["feeling", 0.04897611651703916], ["of", -0.04316926075564441], ["and", 0.035930792761470036], ["good", -0.030099450450342555]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["achieved", 2, 0.47656459939990553], ["days", 14, -0.11111670795794337], ["of", 19, 0.09156010217505314], ["30", 11, -0.042995219956402674], ["i", 0, -0.0015513224178356263], ["sobriety", 22, 0.0010750702969979967]], 0, "i achieved 30 days of sobriety.", raw_div, true);
+            exp.show_raw_text([["mom", 12, 0.42217134839956605], ["she", 20, 0.24272515157362812], ["my", 9, 0.2272540828128321], ["month", 49, -0.07424780870799554], ["after", 41, -0.06664838398792712], ["called", 2, -0.04900689949370746], ["feeling", 28, 0.04897611651703916], ["of", 55, -0.04316926075564441], ["and", 16, 0.035930792761470036], ["good", 36, -0.030099450450342555]], 1, "i called my mom and she was feeling good after a month of illness. ", raw_div, true);
             
         </script>
         </body></html>
