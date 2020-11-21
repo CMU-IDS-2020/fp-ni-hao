@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divGWZTUECFHTSGWIC"></div>
+        <div class="lime top_div" id="top_divY9WVUDWLCVGNLS2"></div>
         
         <script>
-        var top_div = d3.select('#top_divGWZTUECFHTSGWIC').classed('lime top_div', true);
+        var top_div = d3.select('#top_divY9WVUDWLCVGNLS2').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.08283320305435772, 0.05936488803790685, 0.08484609409969457, 0.5658919241086071, 0.006680568561726612, 0.05894965745336586, 0.1414336646843411]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.44418972598201595, 0.24504676392943528, 0.03473115379812868, 0.17456178460576224, 0.016068832830833626, 0.07639529667072696, 0.009006442183097336]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["breakfast", 0.47573741283101734], ["we", -0.22783766674694164], ["they", -0.16316176903570295], ["wonderful", 0.1464640961004204], ["and", -0.09754692073542655], ["were", -0.04839053034850115], ["paninis", 0.025028860111067648], ["had", -0.02377317100954893]], 3, exp_div);
+                exp.show([["date", 0.08995507875105249], ["i", -0.03188756466405371], ["a", -0.02951972588539407], ["had", -0.01296166801449394]], 0, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["breakfast", 7, 0.47573741283101734], ["we", 0, -0.22783766674694164], ["they", 29, -0.16316176903570295], ["wonderful", 39, 0.1464640961004204], ["and", 25, -0.09754692073542655], ["were", 34, -0.04839053034850115], ["paninis", 17, 0.025028860111067648], ["had", 3, -0.02377317100954893]], 3, "we had breakfast paninis and they were wonderful!", raw_div, true);
+            exp.show_raw_text([["date", 8, 0.08995507875105249], ["i", 0, -0.03188756466405371], ["a", 6, -0.02951972588539407], ["had", 2, -0.01296166801449394]], 0, "i had a date", raw_div, true);
             
         </script>
         </body></html>

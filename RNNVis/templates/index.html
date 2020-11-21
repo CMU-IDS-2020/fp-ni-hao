@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
+  <meta charset="utf-8" />
   <title>RNNVis</title>
+
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/index.css')}}">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/html5reset.css')}}">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -117,8 +119,8 @@
     <tr>
       <td width="900px">
         <h3> User Input: </h3>
-        <!-- <button class="button" onclick="next_sent()">switch </button> -->
-        <a class="button" href="{{url_for('show_index')}}">switch</a>
+        <button class="button" onclick="next_sent()">switch </button>
+        <!-- <a class="button" href="{{url_for('show_index')}}">switch</a> -->
         <p> {{sentence}} </p>
         <p> Your current selected words is: <span id="selected_word"></span></p>
       </td>
@@ -158,11 +160,13 @@
         <div id = "test2">
         </div>
         <p> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>. </p>
+
       </td>
       <td width = "650px">
         <div id = "lime_explanation">
         </div>
         <div id = "lime_predict_prob">
+    
         </div>       
       </td>
     </tr>
@@ -253,14 +257,25 @@
 
 
 <script>
-  $(document).ready(function(){
-    $("#lime_predict_prob").load("static/model/lime.html", function(){
-            $('.text_div').detach().prependTo('#test2');
+
+  function next_sent() {
+    // window.location = self.location;
+    location.reload(true);
+    // history.go(0);
+  }
+
+  $.ajax({
+    url: "static/model/lime.html",
+    cache: false,
+    dataType: "html",
+    success: function(data) {
+      $("#lime_predict_prob").html(data);
+      $('.text_div').detach().prependTo('#test2');
             $('.text_div h3').html("");      
-            $(".predict_proba").before($(".explanation"))
-            // $('.explanation').detach().prependTo('#lime_explanation');
-    });
+            $(".predict_proba").before($(".explanation"));
+    }
   });
+
   var words = $( "p" ).first().text().split( /\s+/ );
   var text = words.join( "</span> <span>" );
   $( "p" ).first().html( "<span>" + text + "</span>" );
