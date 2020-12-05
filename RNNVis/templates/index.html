@@ -158,7 +158,7 @@
       <td width = "600px;" style="vertical-align: top;" id="td1">
         <h3> Model Output: </h3>
         <div id = "test2"> </div>
-        <p> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>. </p>
+        <p id = "model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>. </p>
         
 
       </td>
@@ -270,23 +270,25 @@
 <script>
 
   function next_sent() {
-    // window.location = self.location;
     location.reload(true);
-    // history.go(0);
   }
-
+  
   $.ajax({
-    url: "static/model/lime.html",
-    cache: false,
-    dataType: "html",
-    success: function(data) {
-      $("#lime_predict_prob").html(data);
-      $('.text_div').detach().prependTo('#test2');
-            $('.text_div h3').html("");      
-            $(".predict_proba").before($(".explanation"));
-    }
+      url: "static/model/lime.html",
+      cache: false,
+      dataType: "html",
+      success: function(data) {
+        $("#lime_predict_prob").html(data);
+        // $("#lime_predict_prob").style.visibility = "hidden";
+        $('.text_div').detach().prependTo('#test2');
+        $('.text_div h3').html("");      
+        $(".predict_proba").before($(".explanation"));
+        $('.text_div').hide();
+        $(".predict_proba").hide();
+        $(".explanation").hide();
+      }
   });
-
+  
   var result_words = [];
   var words = $( "p" ).first().text().split( /\s+/ );
   var text = words.join( "</span> <span>" );
@@ -334,16 +336,20 @@
 
   // hide table
   function hideTable(){
-    document.getElementById('model_table').style.visibility = "hidden";
-    document.getElementById('test2').style.display = 'none';
-    document.getElementById('user_choice').style.visibility = "hidden";
+    // document.getElementById('model_table').style.visibility = "hidden";
+    // document.getElementById('test2').style.display = 'none';
+    document.getElementById('model_pred').style.display = 'none';
+    // document.getElementById('user_choice').style.visibility = "hidden";
   }
 
   function send(){
     // show table
-    document.getElementById('model_table').style.visibility = "visible";
-    document.getElementById('test2').style.display = 'block';
-    document.getElementById('user_choice').style.visibility = "visible";
+    // document.getElementById('model_table').style.visibility = "visible";
+    document.getElementById('model_pred').style.display = 'block';
+    // document.getElementById('user_choice').style.visibility = "visible";
+    $('.text_div').show();
+    $(".predict_proba").show();
+    $(".explanation").show();
 
     var checked_label;
     var label_intdic = {0: 'achievement', 1:'affection',2:'bonding',3:'enjoy the moment',4:'exercise',5:'leisure',6:'nature'};
