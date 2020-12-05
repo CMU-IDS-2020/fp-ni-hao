@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divY9WVUDWLCVGNLS2"></div>
+        <div class="lime top_div" id="top_divK3K9MB1JUCTKX3S"></div>
         
         <script>
-        var top_div = d3.select('#top_divY9WVUDWLCVGNLS2').classed('lime top_div', true);
+        var top_div = d3.select('#top_divK3K9MB1JUCTKX3S').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.44418972598201595, 0.24504676392943528, 0.03473115379812868, 0.17456178460576224, 0.016068832830833626, 0.07639529667072696, 0.009006442183097336]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.010019517407175677, 0.7364423951216524, 0.043309425647706436, 0.0025585504252185385, 0.0018479319554054608, 0.20546041985613903, 0.00036175958670255087]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["date", 0.08995507875105249], ["i", -0.03188756466405371], ["a", -0.02951972588539407], ["had", -0.01296166801449394]], 0, exp_div);
+                exp.show([["my", 0.4580283080326804], ["game", -0.30722270893719017], ["with", 0.2129951977012702], ["sons", 0.179381857759051], ["love", 0.16673961831391962], ["go", -0.08879999951191155], ["the", 0.0825138080692004], ["football", -0.0812097272193734], ["to", -0.07096366287292055], ["watch", -0.035897183894567385]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["date", 8, 0.08995507875105249], ["i", 0, -0.03188756466405371], ["a", 6, -0.02951972588539407], ["had", 2, -0.01296166801449394]], 0, "i had a date", raw_div, true);
+            exp.show_raw_text([["my", 28, 0.4580283080326804], ["game", 58, -0.30722270893719017], ["with", 23, 0.2129951977012702], ["sons", 31, 0.179381857759051], ["love", 2, 0.16673961831391962], ["go", 7, -0.08879999951191155], ["the", 45, 0.0825138080692004], ["football", 49, -0.0812097272193734], ["to", 10, -0.07096366287292055], ["to", 36, -0.07096366287292055], ["watch", 39, -0.035897183894567385]], 1, "i love go to a stadium with my sons to watch the football game", raw_div, true);
             
         </script>
         </body></html>

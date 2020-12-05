@@ -24,7 +24,7 @@ import lime
 from lime import lime_text
 from lime.lime_text import LimeTextExplainer
 import matplotlib as plt
-
+from flask import request, jsonify, render_template
 
 def query_db_1(query, args=(), one=False):
     """query_db_1."""
@@ -50,12 +50,15 @@ def uploaded_file(filename):
 @RNNVis.app.route('/', methods=['GET', 'POST'])
 def show_index():
     """Display / route."""
+    
     context = {} 
     labels = ['achievement','affection','bonding','enjoy the moment','exercise','leisure','nature']
     labeldict = {'achievement': 0,'affection': 1,'bonding': 2,'enjoy_the_moment': 3,'exercise': 4, 'leisure': 5,'nature': 6}
+    label_intdic = {0: 'achievement', 1:'affection',2:'bonding',3:'enjoy the moment',4:'exercise',5:'leisure',6:'nature'}
     global lr_model
     global lr_vectorizer
     global dataset
+
     # Comment the line to fix the sentence content
     # random.seed(10)
     index = random.randint(0,14124)
@@ -76,4 +79,15 @@ def show_index():
     # context['word_weight'] = url_for('uploaded_file', filename='affection_sample.png')
     # context['pred_prob'] = url_for('uploaded_file', filename='prediction_prob.png')
     context['explanation'] = str(pred[0])
+    context['label_intdic'] = label_intdic
+    # context['first_page'] = url_for('uploaded_file', filename='FirstPage.png')
+
+    if request.method == "POST":
+        if request.json != None:
+            context['word_list'] = request.json['word_list']
+            context['checked_source'] = request.json['checked_source']
+            print(context['word_list'], context['checked_source'])  
+        
+            context['feedback'] = "user selected " + label_intdic[int(context['checked_source'])]
+
     return flask.render_template("index.html", **context)

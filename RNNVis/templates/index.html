@@ -96,6 +96,12 @@
     .model_table td {
       padding: 15px;
     }
+    .user_choice tr{
+      background: #dcc9f1;
+    }
+    .user_choice tr {
+      padding: 15px;
+    }
     .sentences {
       background: white;
     }
@@ -103,7 +109,7 @@
   </style>
 </head>
 
-<body>
+<body onload="javascript:hideTable()">
 
 <div class="sidenav">
   <a href="#">Source of Happiness</a>
@@ -112,7 +118,9 @@
   <hr class="rounded">
 </div>
 
+
 <div id="main" class="main">
+
   <h2> Explaining Sentiment Analysis </h2>
   
   <table class="user_table">
@@ -126,51 +134,54 @@
       </td>
       <td width="350px">
         <p> <b>Which source of happiness?</b> </p>
-        <input type="radio" id="bonding" name="Source" value="one">
-        <label for="one">Bonding</label><br>
-        <input type="radio" id="leisure" name="Source" value="two">
-        <label for="two">Leisure</label><br>
-        <input type="radio" id="affection" name="Source" value="three">
-        <label for="three">Affection</label><br>
-        <input type="radio" id="enjoy_mo" name="Source" value="four">
-        <label for="four">Enjoy the moment</label><br>
-        <input type="radio" id="achievement" name="Source" value="five">
-        <label for="five">Achievement</label><br>
-        <input type="radio" id="nature" name="Source" value="six">
-        <label for="six">Nature</label><br>
-        <input type="radio" id="exercise" name="Source" value="seven">
-        <label for="seven">Exercise</label><br>
+        {% for i in range(0,7) %}
+            <input type="radio" id = "{{i}}" value="{{label_intdic[i]}}" name="{{label_intdic[i]}}">
+            <label for="i">{{label_intdic[i]}}</label><br>
+        {% endfor %}
+        
       </td>
     </tr>
     <tr>
       <td colspan="2">
         <p><b> Are you satisfied with your choices? </b></p>
-        <input type="radio" id="yes" name="Choice" value="yes">
-        <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="Choice" value="no">
-        <label for="no">No</label><br>
-        <input class="button" type="submit" value="submit">
+        
+        <button class="button" onClick='send();' value="Yes" id="yes"/>Yes </button>
+      
+        <!-- <input type='button' onClick='hideTable();' value='hide'>  -->
       </td>
     </tr>
   </table>
-  <table class="model_table">
+
+
+  <table class="model_table" id="model_table">
     <tr>
-      <td width = "600px;" style="vertical-align: top;">
+      <td width = "600px;" style="vertical-align: top;" id="td1">
         <h3> Model Output: </h3>
-        <div id = "test2">
-        </div>
+        <div id = "test2"> </div>
         <p> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>. </p>
+        
 
       </td>
-      <td width = "650px">
-        <div id = "lime_explanation">
-        </div>
-        <div id = "lime_predict_prob">
-    
-        </div>       
+      <td width = "650px" id="td2">
+        <div id = "lime_explanation"> </div>
+        <div id = "lime_predict_prob"> </div>       
       </td>
     </tr>
   </table>
+
+  
+  <table class="user_choice" id="user_choice">
+    <tr>
+      <td width = 1310px>
+        <h3> Conclusion: </h3>
+        <p> Your selected words are <span id="result_words"></span>. </p>
+        <p> You think the source of happiness for this sentence is: <span id="checked_label">. </span></p>
+      </td>
+      
+    </tr>
+    
+  </table>
+
 
   <select id="wordcloud-dropdown" class="button" onchange="wordcloud();">
     <option selected="selected">Show word cloud</option>
@@ -276,17 +287,21 @@
     }
   });
 
+  var result_words = [];
   var words = $( "p" ).first().text().split( /\s+/ );
   var text = words.join( "</span> <span>" );
   $( "p" ).first().html( "<span>" + text + "</span>" );
   $( "span" ).on( "click", function() {
     if (this.style.backgroundColor == "yellow"){
       $( this ).css( "background-color", "" );
+      var word = result_words.indexOf(this.innerText);
+      result_words.splice(word,1);
     }
     else{
       $( this ).css( "background-color", "yellow" );
+      result_words.push(this.innerText);
     }
-    
+
     var selection = window.getSelection();
     if (!selection || selection.rangeCount < 1) return true;
     var range = selection.getRangeAt(0);
@@ -314,7 +329,50 @@
     var word = range.toString();
     // alert(word);
     document.getElementById("selected_word").innerHTML = word;
+    
   });
+
+  // hide table
+  function hideTable(){
+    document.getElementById('model_table').style.visibility = "hidden";
+    document.getElementById('test2').style.display = 'none';
+    document.getElementById('user_choice').style.visibility = "hidden";
+  }
+
+  function send(){
+    // show table
+    document.getElementById('model_table').style.visibility = "visible";
+    document.getElementById('test2').style.display = 'block';
+    document.getElementById('user_choice').style.visibility = "visible";
+
+    var checked_label;
+    var label_intdic = {0: 'achievement', 1:'affection',2:'bonding',3:'enjoy the moment',4:'exercise',5:'leisure',6:'nature'};
+    for(i=0; i<7; i++){
+      if (document.getElementById(i).checked == true){
+        checked_label = i;
+      }
+    }
+    
+    
+    document.getElementById("result_words").innerHTML = result_words;
+    document.getElementById("checked_label").innerHTML = label_intdic[checked_label];
+
+    var send_back = {
+      'word_list': result_words,
+      'checked_source': checked_label
+    }
+    // alert(send_back);
+    $.ajax({
+      url: '/',
+      type: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(send_back),   // converts js value to JSON string
+      })
+      .done(function(result){     // on success get the return object from server
+          console.log(result);     // do whatever with it. In this case see it in console
+      });
+  }
 </script>
+
 
 </html>
