@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divZFANEYAPW44MTMT"></div>
+        <div class="lime top_div" id="top_div3PV6PKCPVZRB83N"></div>
         
         <script>
-        var top_div = d3.select('#top_divZFANEYAPW44MTMT').classed('lime top_div', true);
+        var top_div = d3.select('#top_div3PV6PKCPVZRB83N').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.004033932125128606, 0.010226296911467153, 0.003893784847299967, 0.9685690878742423, 0.0026348998786929695, 0.006886442951511009, 0.0037555554116580573]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.09325633223671646, 0.03404028532908483, 0.2506473754035465, 0.5476780077614604, 0.017417638512443424, 0.05203140897083173, 0.004928951785916833]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["happy", 0.25006072447717886], ["relaxing", 0.18244799221192604], ["evening", 0.16900976701292647], ["me", 0.15078703746563407], ["on", -0.06253354484581691], ["made", -0.053312465114826256], ["a", 0.009846851447961245], ["saturday", 0.008215085577201499]], 3, exp_div);
+                exp.show([["have", 0.25309539578078005], ["my", -0.24352922526021095], ["to", 0.14340405414165058], ["evening", 0.11389392460082964], ["go", 0.11210054032431511], ["jobs", 0.09437935324701979], ["normally", 0.08885055644942703], ["of", -0.07760172182510731], ["since", -0.06991140776874427], ["club", -0.06526989506005575]], 3, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["happy", 39, 0.25006072447717886], ["relaxing", 0, 0.18244799221192604], ["evening", 23, 0.16900976701292647], ["me", 36, 0.15078703746563407], ["on", 9, -0.06253354484581691], ["made", 31, -0.053312465114826256], ["a", 12, 0.009846851447961245], ["saturday", 14, 0.008215085577201499]], 3, "relaxing on a saturday evening made me happy", raw_div, true);
+            exp.show_raw_text([["have", 2, 0.25309539578078005], ["have", 38, 0.25309539578078005], ["have", 107, 0.25309539578078005], ["my", 7, -0.24352922526021095], ["my", 59, -0.24352922526021095], ["to", 43, 0.14340405414165058], ["to", 49, 0.14340405414165058], ["to", 73, 0.14340405414165058], ["evening", 10, 0.11389392460082964], ["go", 46, 0.11210054032431511], ["go", 70, 0.11210054032431511], ["jobs", 62, 0.09437935324701979], ["normally", 98, 0.08885055644942703], ["of", 56, -0.07760172182510731], ["since", 23, -0.06991140776874427], ["club", 78, -0.06526989506005575]], 3, "i have my evening free since i didn't have to go to one of my jobs or go to a club meeting that i normally have every week.", raw_div, true);
             
         </script>
         </body></html>

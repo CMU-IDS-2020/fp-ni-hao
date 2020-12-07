@@ -66,17 +66,12 @@
       background: rgb(242,180,118) center no-repeat;
       background-size: 1700px 800px;
     }
-    #section02 { background: rgb(228, 172, 124)  center center / cover no-repeat;}
+    #section02 { background: rgb(227, 171, 124)  center center / cover no-repeat;}
     #section03 { background: rgb(254, 255, 251)  center center / cover;}
     #section04 { background: rgb(247, 235, 210)  center center / cover no-repeat;}
     #section05 { background: rgb(248, 216, 190)  center center / cover no-repeat;}
     #section06 { background: rgb(226, 208, 208)  center center / cover no-repeat;}
     /* #section10 { background: url(https://picsum.photos/1200/800?image=516) center center / cover no-repeat;} */
-    #firstpage{
-      position: absolute;
-      right: 0px;
-      bottom: 0px;
-    }
 
     #thanks {
       background-color: rgb(251, 108, 171);
@@ -95,14 +90,14 @@
     }
     #thanks h2 {
       margin-bottom: 60px;
-      color: white;
-      font : normal 300 64px/1 'chalkduster', fantasy;
+      color: #333;
+      font : normal 300 64px/1 'Josefin Sans', sans-serif;
       text-align: center;
       white-space: nowrap;
     }
     #thanks p {
       color: #333;
-      font : normal 400 20px/1 'chalkduster', fantasy;
+      font : normal 400 20px/1 'Josefin Sans', sans-serif;
     }
     #thanks p a {
       color: #333;
@@ -342,7 +337,7 @@
     }
     .typewriter{
       font-family: chalkduster, fantasy;
-/*      font-size: 00%;*/
+      font-size: 200%;
       color: white;
       letter-spacing: .17em;
       margin: 0 auto;
@@ -376,10 +371,6 @@
       background-color = 
     }
 
-    .img{
-      border:0;
-    }
-
     .sentences {
       background: white;
     }
@@ -389,13 +380,8 @@
 
 <body onload="javascript:hideTable()">
   <section id="section01" class="demo">
-    <center>
-      <br></br>
-      <h1 class = "typewriter"> 😊 Explaining Sentiment Analysis 😊 </h1>
-      <h2 class = "typewriter"> Why are you feeling happy? </h2>
-    </center>
-    <img id="firstpage" src="https://www.linkpicture.com/q/FirstPage_cut.jpg" height="260px" width=700px >
-    <a href="#section02"><span></span></a >
+    <center> <img src="https://www.linkpicture.com/q/FirstPage_1.jpg" height="500px" width=1000px> </center>
+    <a href="#section02"><span></span></a>
   </section>
 
   <section id="section02" class="demo">
@@ -425,13 +411,12 @@
             <p> Your current selected words is: <span id="selected_word"></span></p>
             
           </td>
-          <td width="250px">
+          <td width="350px">
             <p> <b>Which source of happiness?</b> </p>
             {% for i in range(0,7) %}
                 <input type="radio" id = "{{i}}" value="{{label_intdic[i]}}" name="{{label_intdic[i]}}">
                 <label for="i">{{label_intdic[i]}}</label><br>
             {% endfor %}
-            
           </td>
           <td>
             <b> Confirm your choice? </b>
@@ -444,7 +429,7 @@
             <b> Are you satisfied with your choices? </b>
             <button class="button_send" onClick="send()">Yes </button>
           </td>
-        </tr> -->
+        </tr>
       </table>
 
 
