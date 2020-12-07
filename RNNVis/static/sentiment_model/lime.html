@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divQL4XBMY9RSXGB0Y"></div>
+        <div class="lime top_div" id="top_divFWWKETMRLCWRRN5"></div>
         
         <script>
-        var top_div = d3.select('#top_divQL4XBMY9RSXGB0Y').classed('lime top_div', true);
+        var top_div = d3.select('#top_divFWWKETMRLCWRRN5').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.24162490579279072, 0.7583750942072093]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.19986968505967617, 0.8001303149403238]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["the", -0.08631037638234682], ["TWEET", 0.07553604413222409], ["com", 0.06276907648898987], ["wing", 0.05441589747725873], ["stock", -0.048852622657024516], ["you", 0.047128840512836036], ["Gold", 0.045929366703765094], ["discount", 0.034788902799961864], ["http", -0.030723235114863846], ["back", -0.029826875599429925]], 1, exp_div);
+                exp.show([["love", 0.18366365452848107], ["song", 0.11520808874856686], ["the", -0.105491889431654], ["bang", -0.05424935604551166], ["BANG", -0.054163926508031236], ["all", 0.052957016847721416], ["started", -0.04340574397583449], ["big", 0.03355389075445309], ["It", 0.03184693651058815], ["theme", 0.007853142274855318]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["the", 89, -0.08631037638234682], ["the", 116, -0.08631037638234682], ["TWEET", 107, 0.07553604413222409], ["com", 54, 0.06276907648898987], ["wing", 11, 0.05441589747725873], ["stock", 33, -0.048852622657024516], ["you", 81, 0.047128840512836036], ["Gold", 0, 0.045929366703765094], ["discount", 93, 0.034788902799961864], ["http", 41, -0.030723235114863846], ["back", 25, -0.029826875599429925]], 1, "Gold angel wing earrings back in stock!  http://poprl.com/0Cxz only \u00ef\u00bf\u00bd4.80 when you use the discount code TWEET at the checkout  Bargain!", raw_div, true);
+            exp.show_raw_text([["love", 2, 0.18366365452848107], ["song", 17, 0.11520808874856686], ["the", 7, -0.105491889431654], ["the", 49, -0.105491889431654], ["bang", 57, -0.05424935604551166], ["BANG", 62, -0.054163926508031236], ["all", 32, 0.052957016847721416], ["started", 36, -0.04340574397583449], ["big", 53, 0.03355389075445309], ["It", 29, 0.03184693651058815], ["theme", 11, 0.007853142274855318]], 1, "I love the theme song. |quot;It all started with the big bang BANG!!!|quot; ", raw_div, true);
             
         </script>
         </body></html>

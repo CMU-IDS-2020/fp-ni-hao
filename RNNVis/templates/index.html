@@ -474,7 +474,7 @@
 
       <table class="model_table" id="model_table">
         <tr>
-          <td width = "600px;" style="vertical-align: top;" id="td1">
+          <td width = "800px;" style="vertical-align: top;" id="td1">
             <h3 id="modeloutput"> Model Output: </h3>
             <div id = "test2"> </div>
             <br>
@@ -494,7 +494,7 @@
   
       <table class="user_choice_table" id="user_choice_table">
         <tr>
-          <td width = 1280px>
+          <td width = 1470px;>
             <h3> Conclusion: </h3>
             <p> Your selected words are <span id="result_words"></span>. </p>
             <p> You think the source of happiness for this sentence is <span id="checked_label">. </span></p>
@@ -529,6 +529,7 @@
       var result_words = [];
       var words = $( "h4" ).first().text().split( /\s+/ );
       var text = words.join( "</span> <span>" );
+      
       $( "h4" ).first().html( "<span>" + text + "</span>" );
       $( "span" ).on( "click", function() {
         if (this.style.backgroundColor == "yellow"){
@@ -630,8 +631,8 @@
             <h3> A random tweet: </h3>
             
             <button class="button" onclick="next_sent()">switch </button>
-            <h4 id = "s_sent"> {{s_sentence}} </h4>
-            <p> Your current selected words is: <span id="s_selected_word"></span></p>
+            <h5> {{s_sentence}} </h4>
+            <p> Your current selected words is: <span id="selected_word2"></span></p>
             
           </td>
           <td width="250px">
@@ -652,7 +653,7 @@
 
       <table class="model_table" id="s_model_table">
         <tr>
-          <td width = "600px;" style="vertical-align: top;" id="td1">
+          <td width = "785px;" style="vertical-align: top;" id="td1">
             <h3 id="s_modeloutput"> Model Output: </h3>
             <div id = "s_test2"> </div>
             <br>
@@ -672,9 +673,9 @@
   
       <table class="user_choice_table" id="s_user_choice_table">
         <tr>
-          <td width = 1280px>
+          <td width = 1470px>
             <h3> Conclusion: </h3>
-            <p> Your selected words are <span id="s_result_words"></span>. </p>
+            <p> Your selected words are <span id="s_selected_word"></span>. </p>
             <p> You think the source of happiness for this sentence is <span id="s_checked_label">. </span></p>
           </td>
           
@@ -699,11 +700,6 @@
           }
       });
       
-      var s_result_words = [];
-      var s_words = $( "#s_sent" ).text().split( /\s+/ );
-      var s_text = s_words.join( "</span '> <span>" );
-    
-    
       function s_send(){
         // show table
         document.getElementById('s_model_table').style.display = 'table';
@@ -720,10 +716,53 @@
           }
         }
       
-        document.getElementById("s_result_words").innerHTML = s_result_words;
+        document.getElementById("s_selected_word").innerHTML = result_words2;
         document.getElementById("s_checked_label").innerHTML = s_label_intdic[s_checked_label];
   
       }
+
+      var result_words2 = [];
+      var words2 = $( "h5" ).first().text().split( /\s+/ );
+      var text2 = words2.join( "</span2> <span2>" );
+      $( "h5" ).first().html( "<span2>" + text2 + "</span2>" );
+      $( "span2" ).on( "click", function() {
+        if (this.style.backgroundColor == "yellow"){
+          $( this ).css( "background-color", "" );
+          var word2 = result_words2.indexOf(this.innerText);
+          result_words2.splice(word2,1);
+        }
+        else{
+          $( this ).css( "background-color", "yellow" );
+          result_words2.push(this.innerText);
+        }
+    
+        var selection2 = window.getSelection();
+        if (!selection2 || selection2.rangeCount < 1) return true;
+        var range2 = selection2.getRangeAt(0);
+        var node2 = selection2.anchorNode;
+        var word_regexp2 = /^\w*$/;
+    
+        // Extend the range backward until it matches word beginning
+        while ((range2.startOffset > 0) && range2.toString().match(word_regexp2)) {
+          range2.setStart(node2, (range2.startOffset - 1));
+        }
+        // Restore the valid word match after overshooting
+        if (!range2.toString().match(word_regexp2)) {
+          range2.setStart(node2, range2.startOffset + 1);
+        }
+    
+        // Extend the range forward until it matches word ending
+        while ((range2.endOffset < node2.length) && range2.toString().match(word_regexp2)) {
+          range2.setEnd(node2, range.endOffset + 1);
+        }
+        // Restore the valid word match after overshooting
+        if (!range2.toString().match(word_regexp2)) {
+          range2.setEnd(node2, range2.endOffset - 1);
+        }
+    
+        var word2 = range2.toString();
+        document.getElementById("s_selected_word").innerHTML = result_words2;        
+      });
     </script>
     
 

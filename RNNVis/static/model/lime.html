@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divVRBQWUI3MWX852T"></div>
+        <div class="lime top_div" id="top_divA37IE767PA3U4N8"></div>
         
         <script>
-        var top_div = d3.select('#top_divVRBQWUI3MWX852T').classed('lime top_div', true);
+        var top_div = d3.select('#top_divA37IE767PA3U4N8').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.024829836634032012, 0.0036062936776905152, 0.0021199363617600106, 0.0033475949992872074, 0.9586372596074412, 0.005721895182212507, 0.001737183537576566]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.15677052273013165, 0.008670306146951851, 0.008119514239805434, 0.8211543620870538, 0.0006059927839931375, 0.003846159024982222, 0.0008331429870819473]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["fitness", 0.3768052917627481], ["defined", 0.18499117917817662], ["better", 0.18425896479623338], ["goal", 0.04935139893329343], ["i", 0.019548335161906842], ["a", 0.019505842372213797]], 4, exp_div);
+                exp.show([["happy", 0.392971151035084], ["me", 0.23286443912597668], ["ordered", 0.10846931064734125], ["today", 0.09066901950285546], ["got", -0.07644172839422038], ["my", -0.06841946349849636], ["new", -0.05652274312241126], ["make", -0.05580838006018397], ["amazon", 0.05470496930792786], ["which", 0.05272700980286389]], 3, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["fitness", 19, 0.3768052917627481], ["defined", 2, 0.18499117917817662], ["better", 12, 0.18425896479623338], ["goal", 27, 0.04935139893329343], ["i", 0, 0.019548335161906842], ["a", 10, 0.019505842372213797]], 4, "i defined a better fitness goal.", raw_div, true);
+            exp.show_raw_text([["happy", 72, 0.392971151035084], ["me", 69, 0.23286443912597668], ["ordered", 38, 0.10846931064734125], ["today", 0, 0.09066901950285546], ["got", 8, -0.07644172839422038], ["my", 12, -0.06841946349849636], ["new", 15, -0.05652274312241126], ["make", 64, -0.05580838006018397], ["amazon", 51, 0.05470496930792786], ["which", 30, 0.05272700980286389]], 3, "today i got my new sunglasses which i ordered from amazon. this make me happy.", raw_div, true);
             
         </script>
         </body></html>
