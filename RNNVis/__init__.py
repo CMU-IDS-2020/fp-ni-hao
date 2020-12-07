@@ -10,6 +10,9 @@ app = flask.Flask(__name__)  # pylint: disable=invalid-name
 lr_model = pickle.load(open('RNNVis/static/model/model.pkl', 'rb'))
 lr_vectorizer = pickle.load(open('RNNVis/static/model/vectorizer.pkl', 'rb'))
 dataset = pd.read_csv('RNNVis/static/model/cleaned.csv')
+s_model = pickle.load(open('RNNVis/static/sentiment_model/model.pkl', 'rb'))
+s_vectorizer = pickle.load(open('RNNVis/static/sentiment_model/vectorizer.pkl', 'rb'))
+s_dataset = pd.read_csv('RNNVis/static/sentiment_model/cleaned_sentiment.csv')
 # Read settings from config module (produck/config.py)
 app.config.from_object('RNNVis.config')
 

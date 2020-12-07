@@ -14,7 +14,7 @@ import flask
 from flask import send_from_directory
 from flask import url_for
 import RNNVis
-from RNNVis import lr_model, lr_vectorizer, dataset
+from RNNVis import lr_model, lr_vectorizer, dataset, s_model, s_vectorizer, s_dataset
 import random
 from datetime import datetime
 import pickle
@@ -50,8 +50,9 @@ def uploaded_file(filename):
 @RNNVis.app.route('/', methods=['GET', 'POST'])
 def show_index():
     """Display / route."""
-    
     context = {} 
+
+    # Dealing with the happy source model
     labels = ['achievement','affection','bonding','enjoy the moment','exercise','leisure','nature']
     labeldict = {'achievement': 0,'affection': 1,'bonding': 2,'enjoy_the_moment': 3,'exercise': 4, 'leisure': 5,'nature': 6}
     label_intdic = {0: 'achievement', 1:'affection',2:'bonding',3:'enjoy the moment',4:'exercise',5:'leisure',6:'nature'}
@@ -81,6 +82,25 @@ def show_index():
     context['explanation'] = str(pred[0])
     context['label_intdic'] = label_intdic
     # context['first_page'] = url_for('uploaded_file', filename='FirstPage.png')
+
+
+    # Dealing with the sentiment model
+    global s_model
+    global s_vectorizer
+    global s_dataset
+    s_labels = ['unhappy','happy']
+    s_labeldict = {'unhappy': 0,'happy': 1}
+    s_label_intdic = {0: 'unhappy', 1:'happy'}
+    s_index = random.randint(0,10000)
+    s_sentence = [s_dataset["cleaned_text"][s_index]]
+    s_pred = s_model.predict(s_vectorizer.transform(s_sentence))
+    s_c = make_pipeline(s_vectorizer, s_model)
+    s_explainer = LimeTextExplainer(class_names=s_labels)
+    s_exp = s_explainer.explain_instance(s_dataset["text"][s_index], s_c.predict_proba, labels=[0,1])
+    s_exp.save_to_file('RNNVis/static/sentiment_model/lime.html', text=s_dataset["text"][s_index],labels=(s_pred[0],))
+    context['s_sentence'] = s_dataset["text"][s_index]
+    context['s_explanation'] = str(s_label_intdic[s_pred[0]])
+    context['s_label_intdic'] = label_intdic
 
     if request.method == "POST":
         if request.json != None:
