@@ -31,11 +31,15 @@
   }
 
 #search{
-    border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  z-index: 3;
 }
 
 #search form{
     border-radius: 10px;
+    z-index: 3;
 }
 
 .search-box{
@@ -49,6 +53,7 @@
     min-width: 400px;
     color: gray;
     background-color: rgba(255,255,255,0.6);
+    z-index: 3;
 }
 
 .search-btn{
@@ -59,6 +64,7 @@
     border: none;
     font-size: 18px;
     padding:0px 10px;
+    z-index: 3;
 }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */

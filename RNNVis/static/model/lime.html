@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div12M4Y8SQ20CNY5P"></div>
+        <div class="lime top_div" id="top_divVRBQWUI3MWX852T"></div>
         
         <script>
-        var top_div = d3.select('#top_div12M4Y8SQ20CNY5P').classed('lime top_div', true);
+        var top_div = d3.select('#top_divVRBQWUI3MWX852T').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.8731571012107501, 0.008809365157727966, 0.005333556512601669, 0.017731033051683838, 0.001806090490505942, 0.00346914072625675, 0.08969371285047381]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.024829836634032012, 0.0036062936776905152, 0.0021199363617600106, 0.0033475949992872074, 0.9586372596074412, 0.005721895182212507, 0.001737183537576566]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["finished", 0.4140013675780889], ["finally", 0.10801595216910281], ["trees", 0.09396243644179224], ["yard", -0.09364617845404925], ["the", -0.08134586357456683], ["nice", -0.0737257136549853], ["making", 0.06729569252807696], ["and", -0.06049371189022506], ["we", -0.04182573720425944], ["truly", 0.01264219545332714]], 0, exp_div);
+                exp.show([["fitness", 0.3768052917627481], ["defined", 0.18499117917817662], ["better", 0.18425896479623338], ["goal", 0.04935139893329343], ["i", 0.019548335161906842], ["a", 0.019505842372213797]], 4, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["finished", 11, 0.4140013675780889], ["finally", 3, 0.10801595216910281], ["trees", 48, 0.09396243644179224], ["yard", 33, -0.09364617845404925], ["yard", 79, -0.09364617845404925], ["the", 29, -0.08134586357456683], ["nice", 74, -0.0737257136549853], ["making", 65, 0.06729569252807696], ["and", 55, -0.06049371189022506], ["we", 0, -0.04182573720425944], ["truly", 59, 0.01264219545332714]], 0, "we finally finished clearing the yard of brush, trees, and truly making a nice yard!", raw_div, true);
+            exp.show_raw_text([["fitness", 19, 0.3768052917627481], ["defined", 2, 0.18499117917817662], ["better", 12, 0.18425896479623338], ["goal", 27, 0.04935139893329343], ["i", 0, 0.019548335161906842], ["a", 10, 0.019505842372213797]], 4, "i defined a better fitness goal.", raw_div, true);
             
         </script>
         </body></html>
