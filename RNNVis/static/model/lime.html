@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div3MJ15R3DN69AFA5"></div>
+        <div class="lime top_div" id="top_div12M4Y8SQ20CNY5P"></div>
         
         <script>
-        var top_div = d3.select('#top_div3MJ15R3DN69AFA5').classed('lime top_div', true);
+        var top_div = d3.select('#top_div12M4Y8SQ20CNY5P').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.00032732054199840967, 0.9966352908410047, 0.0011858810991607668, 0.0015887848925392523, 0.00015894191306231083, 4.7426438455283476e-05, 5.6354273779166326e-05]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.8731571012107501, 0.008809365157727966, 0.005333556512601669, 0.017731033051683838, 0.001806090490505942, 0.00346914072625675, 0.08969371285047381]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["wife", 0.557170622941547], ["my", 0.20310896638608253], ["with", 0.06558688835015138], ["was", -0.05162195163097711], ["event", -0.047135550393299454], ["during", -0.04474919721137678], ["very", -0.0226821592917467], ["week", -0.01928533745385082], ["happy", -0.017320898614001143], ["birthday", 0.010209197737671429]], 1, exp_div);
+                exp.show([["finished", 0.4140013675780889], ["finally", 0.10801595216910281], ["trees", 0.09396243644179224], ["yard", -0.09364617845404925], ["the", -0.08134586357456683], ["nice", -0.0737257136549853], ["making", 0.06729569252807696], ["and", -0.06049371189022506], ["we", -0.04182573720425944], ["truly", 0.01264219545332714]], 0, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["wife", 67, 0.557170622941547], ["wife", 104, 0.557170622941547], ["my", 64, 0.20310896638608253], ["my", 101, 0.20310896638608253], ["with", 96, 0.06558688835015138], ["was", 12, -0.05162195163097711], ["event", 83, -0.047135550393299454], ["during", 57, -0.04474919721137678], ["very", 16, -0.0226821592917467], ["week", 5, -0.01928533745385082], ["happy", 21, -0.017320898614001143], ["birthday", 43, 0.010209197737671429], ["birthday", 74, 0.010209197737671429]], 1, "last week i was very happy while cutting a birthday cake during my wife's birthday event (along with my wife)", raw_div, true);
+            exp.show_raw_text([["finished", 11, 0.4140013675780889], ["finally", 3, 0.10801595216910281], ["trees", 48, 0.09396243644179224], ["yard", 33, -0.09364617845404925], ["yard", 79, -0.09364617845404925], ["the", 29, -0.08134586357456683], ["nice", 74, -0.0737257136549853], ["making", 65, 0.06729569252807696], ["and", 55, -0.06049371189022506], ["we", 0, -0.04182573720425944], ["truly", 59, 0.01264219545332714]], 0, "we finally finished clearing the yard of brush, trees, and truly making a nice yard!", raw_div, true);
             
         </script>
         </body></html>

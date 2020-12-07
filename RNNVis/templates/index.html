@@ -165,7 +165,6 @@
       box-sizing: border-box;
     }
 
-
     #section03 a {
       padding-top: 60px;
     }
@@ -345,6 +344,7 @@
     .typewriter{
       font-family: chalkduster, fantasy;
 /*      font-size: 00%;*/
+      font-size: 35px;
       color: white;
       letter-spacing: .17em;
       margin: 0 auto;
@@ -352,6 +352,13 @@
       white-space: nowrap;
       border-right: .17em solid pink;
       animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+    }
+
+    .search-result{
+      font-family: chalkduster, fantasy;
+      color: white;
+      letter-spacing: .17em;
+      margin: 0 15%;
     }
 
     @keyframes typing {
@@ -396,10 +403,24 @@
       <br></br>
       <h1 class = "typewriter"> 😊 Explaining Sentiment Analysis 😊 </h1>
       <h2 class = "typewriter"> Why are you feeling happy? </h2>
+      </br></br></br></br><br></br><br>
+    <h2 class = "search-result"><span style="color: green;">Christ</span><span style="color: red;">mas</span> is coming! A good time to summrize your 2020 experinece.</h2>
+    </br></br>
+    <div id="search">
+      <form action="" method="post" class="flex-container">
+          <input type="search" name="search" class = 'search-box' placeholder="Type in a happy moment in 2020" required>
+          <button type=submit class = 'search-btn'><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </br></br>
+  {% if  search_query %}
+    <h2 class = "search-result" style="color: gray;">Happiness source of '{{search_query}}' might be <span style="color: black;">{{search_label}}</span>.</h2>  
+  {% endif %}
     </center>
     <img id="firstpage" src="https://www.linkpicture.com/q/FirstPage_cut.jpg" height="260px" width=700px >
     <a href="#section02"><span></span></a >
   </section>
+  <!-- {{test}} -->
 
   <section id="section02" class="demo">
     <center>
@@ -412,8 +433,8 @@
       <b class = "sec2_text">bonding 🤝, affection 🥰, achievement 🎉, nature 🌲, leisure 😎, exercise 🏋️ and enjoy the moment 😮</b>
     </center>
     <a href="#section03"><span></span></a>
-  </section>
 
+  </section>
 
   <section id="section03" class="demo">
     <div>

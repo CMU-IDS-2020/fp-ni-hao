@@ -77,8 +77,6 @@ def show_index():
     # context['weight_test'] = word_weight
     # context['prob_test'] = pred_prob
     context['sentence'] = dataset["cleaned_hm"][index]
-    # context['word_weight'] = url_for('uploaded_file', filename='affection_sample.png')
-    # context['pred_prob'] = url_for('uploaded_file', filename='prediction_prob.png')
     context['explanation'] = str(pred[0])
     context['true_label'] = dataset["ground_truth_category"][index]
     context['label_intdic'] = label_intdic
@@ -103,6 +101,7 @@ def show_index():
     context['s_explanation'] = str(s_label_intdic[s_pred[0]])
     context['s_true_label'] = str(s_label_intdic[s_dataset["label"][s_index]])
     context['s_label_intdic'] = label_intdic
+    context['test'] = flask.request.form
     print(context['s_true_label'] )
 
     if request.method == "POST":
@@ -112,5 +111,11 @@ def show_index():
             print(context['word_list'], context['checked_source'])  
         
             context['feedback'] = "user selected " + label_intdic[int(context['checked_source'])]
+    if 'search' in flask.request.form:
+        query = flask.request.form['search']
+        search_pred = lr_model.predict(lr_vectorizer.transform([query]))
+        context['search_query'] = query
+        context['search_label'] = str(search_pred[0])
+        print(context['search_label'])
 
     return flask.render_template("index.html", **context)

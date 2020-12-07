@@ -29,6 +29,37 @@
     margin-left: 160px; /* Same as the width of the sidebar */
     padding: 0px 10px;
   }
+
+#search{
+    border-radius: 10px;
+}
+
+#search form{
+    border-radius: 10px;
+}
+
+.search-box{
+    margin: 0;
+    height: 2em;
+    padding: 0 5px;
+    border:none;
+    border-radius: 5px 0 0 5px;
+    outline: 0px;
+    font-size: 18px;
+    min-width: 400px;
+    color: gray;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.search-btn{
+    height: 2em;
+    color:white;
+    border-radius: 0 5px 5px 0;
+    background-color: rgba(255, 87, 123, 1);
+    border: none;
+    font-size: 18px;
+    padding:0px 10px;
+}
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
