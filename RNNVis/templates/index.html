@@ -317,10 +317,12 @@
       margin-right: auto;
     }
     .model_table {
-      margin-left: 80px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .user_choice_table {
-      margin-left: 80px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .user_table tr {background: #CBC0D3;}
@@ -386,8 +388,9 @@
     table {opacity: 0.8}
   </style>
 </head>
-
+ 
 <body onload="javascript:hideTable()">
+  <!-- <body> -->
   <section id="section01" class="demo">
     <center>
       <br></br>
@@ -417,7 +420,7 @@
       <table class="user_table">
         <tr>
           <td width="900px">
-            <h3> User Input: </h3>
+            <h3> A happy moment: </h3>
             
             <button class="button" onclick="next_sent()">switch </button>
             <!-- <a class="button" href="{{url_for('show_index')}}">switch</a> -->
@@ -454,7 +457,11 @@
             <h3 id="modeloutput"> Model Output: </h3>
             <div id = "test2"> </div>
             <br>
-            <p id = "model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>. </p>
+            <p id = "model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>.
+              <br></br>
+              The ground truth category of the happy source: <strong>{{true_label}}</strong>.
+            </p>
+
           </td>
           <td width = "650px" id="td2">
             <div id = "lime_explanation"> </div>
@@ -489,12 +496,12 @@
           success: function(data) {
             $("#lime_predict_prob").html(data);
             // $("#lime_predict_prob").style.visibility = "hidden";
-            $('.text_div').detach().prependTo('#test2');
-            $('.text_div h3').html("");      
-            $(".predict_proba").before($(".explanation"));
-            $('.text_div').hide();
-            $(".predict_proba").hide();
-            $(".explanation").hide();
+            $('#lime_predict_prob .text_div').detach().prependTo('#test2');
+            $('#lime_predict_prob .text_div h3').html("");      
+            $("#lime_predict_prob .predict_proba").before($("#lime_predict_prob .explanation"));
+            $('#test2 .text_div').hide();
+            $("#lime_predict_prob .predict_proba").hide();
+            $("#lime_predict_prob .explanation").hide();
           }
       });
       
@@ -548,16 +555,18 @@
         document.getElementById('modeloutput').style.display = 'none';
         document.getElementById('model_pred').style.display = 'none';
         document.getElementById('user_choice_table').style.display = 'none';
+        document.getElementById('s_model_table').style.display = 'none';
+        document.getElementById('s_user_choice_table').style.display = 'none';
       }
     
       function send(){
         // show table
         document.getElementById('modeloutput').style.display = 'block';
         document.getElementById('model_pred').style.display = 'block';
-        document.getElementById('user_choice_table').style.display = 'block';
-        $('.text_div').show();
-        $(".predict_proba").show();
-        $(".explanation").show();
+        document.getElementById('user_choice_table').style.display = 'table';
+        $('#test2 .text_div').show();
+        $("#lime_predict_prob .predict_proba").show();
+        $("#lime_predict_prob .explanation").show();
     
         var checked_label;
         var label_intdic = {0: 'achievement', 1:'affection',2:'bonding',3:'enjoy the moment',4:'exercise',5:'leisure',6:'nature'};
@@ -593,6 +602,108 @@
 
 
   <section id="section04" class="demo">
+    <div>
+      <table class="user_table">
+        <tr>
+          <td width="900px">
+            <h3> A random tweet: </h3>
+            
+            <button class="button" onclick="next_sent()">switch </button>
+            <h4 id = "s_sent"> {{s_sentence}} </h4>
+            <p> Your current selected words is: <span id="s_selected_word"></span></p>
+            
+          </td>
+          <td width="250px">
+            <p> <b>Positive or negative sentiment?</b> </p>          
+            <input type="radio" id = "s_0" value="unhappy" name="unhappy">
+            <label for="s_0">unhappy</label><br>
+            <input type="radio" id = "s_1" value="happy" name="happy">
+            <label for="s_1">happy</label><br>
+            
+          </td>
+          <td>
+            <b> Confirm your choice? </b>
+            <button class="button_send" onClick="s_send()">Yes </button>
+          </td>
+        </tr>
+      </table>
+
+
+      <table class="model_table" id="s_model_table">
+        <tr>
+          <td width = "600px;" style="vertical-align: top;" id="td1">
+            <h3 id="s_modeloutput"> Model Output: </h3>
+            <div id = "s_test2"> </div>
+            <br>
+            <p id = "s_model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized sentiment of the tweet as <strong>{{s_explanation}}</strong>.
+              <br></br>
+              The ground truth category of the sentiment: <strong>{{s_true_label}}</strong>.   
+            </p>
+
+          </td>
+          <td width = "650px" id="td2">
+            <div id = "s_lime_explanation"> </div>
+            <div id = "s_lime_predict_prob"> </div>       
+          </td>
+        </tr>
+      </table>
+
+  
+      <table class="user_choice_table" id="s_user_choice_table">
+        <tr>
+          <td width = 1280px>
+            <h3> Conclusion: </h3>
+            <p> Your selected words are <span id="s_result_words"></span>. </p>
+            <p> You think the source of happiness for this sentence is <span id="s_checked_label">. </span></p>
+          </td>
+          
+        </tr>
+        
+      </table>
+    </div>
+    
+    <script> 
+      $.ajax({
+          url: "static/sentiment_model/lime.html",
+          cache: false,
+          dataType: "html",
+          success: function(data) {
+            $("#s_lime_predict_prob").html(data);
+            $('#s_lime_predict_prob .text_div').detach().prependTo('#s_test2');
+            $('.text_div h3').html("");      
+            $("#s_lime_predict_prob .predict_proba").before($("#s_lime_predict_prob .explanation"));
+            $('#s_test2 .text_div').hide();
+            $("#s_lime_predict_prob .predict_proba").hide();
+            $("#s_lime_predict_prob .explanation").hide();
+          }
+      });
+      
+      var s_result_words = [];
+      var s_words = $( "#s_sent" ).text().split( /\s+/ );
+      var s_text = s_words.join( "</span '> <span>" );
+    
+    
+      function s_send(){
+        // show table
+        document.getElementById('s_model_table').style.display = 'table';
+        document.getElementById('s_user_choice_table').style.display = 'table';
+        $('#s_test2 .text_div').show();
+        $("#s_lime_predict_prob .predict_proba").show();
+        $("#s_lime_predict_prob .explanation").show();
+    
+        var s_checked_label;
+        var s_label_intdic = {0: 'unhappy', 1:'happy'};
+        for(i=0; i<2; i++){
+          if (document.getElementById("s_"+i).checked == true){
+            s_checked_label = i;
+          }
+        }
+      
+        document.getElementById("s_result_words").innerHTML = s_result_words;
+        document.getElementById("s_checked_label").innerHTML = s_label_intdic[s_checked_label];
+  
+      }
+    </script>
     
 
     <a href="#section05"><span></span></a>

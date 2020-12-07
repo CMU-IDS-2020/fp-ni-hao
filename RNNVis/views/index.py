@@ -80,6 +80,7 @@ def show_index():
     # context['word_weight'] = url_for('uploaded_file', filename='affection_sample.png')
     # context['pred_prob'] = url_for('uploaded_file', filename='prediction_prob.png')
     context['explanation'] = str(pred[0])
+    context['true_label'] = dataset["ground_truth_category"][index]
     context['label_intdic'] = label_intdic
     # context['first_page'] = url_for('uploaded_file', filename='FirstPage.png')
 
@@ -100,7 +101,9 @@ def show_index():
     s_exp.save_to_file('RNNVis/static/sentiment_model/lime.html', text=s_dataset["text"][s_index],labels=(s_pred[0],))
     context['s_sentence'] = s_dataset["text"][s_index]
     context['s_explanation'] = str(s_label_intdic[s_pred[0]])
+    context['s_true_label'] = str(s_label_intdic[s_dataset["label"][s_index]])
     context['s_label_intdic'] = label_intdic
+    print(context['s_true_label'] )
 
     if request.method == "POST":
         if request.json != None:

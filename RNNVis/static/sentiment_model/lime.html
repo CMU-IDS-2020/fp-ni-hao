@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divCUOE8GMPN7ODS6O"></div>
+        <div class="lime top_div" id="top_divRRUR0QQSRAB3V88"></div>
         
         <script>
-        var top_div = d3.select('#top_divCUOE8GMPN7ODS6O').classed('lime top_div', true);
+        var top_div = d3.select('#top_divRRUR0QQSRAB3V88').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.2429193377253488, 0.7570806622746512]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.12619833027135163, 0.8738016697286484]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["lunch", 0.11311601160165535], ["late", -0.10793510563071924], ["meet", 0.0906511306449101], ["girlfriend", 0.05597123478195415], ["my", -0.02690616745378676], ["for", -0.023913209311071357], ["to", 0.010115513879729835], ["Off", 0.0014354783684341066], ["a", -0.000347011934504782]], 1, exp_div);
+                exp.show([["wait", 0.20012880964163618], ["cant", -0.09738476715928371], ["going", 0.07462660216775631], ["fab", 0.05979587065380409], ["ello", 0.055734358491852716], ["you", 0.04760057478909314], ["the", -0.040602333809422325], ["tour", -0.019124436957115375], ["DOI", 0.01640666860479188], ["tmwr", 0.010199990777224013]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["lunch", 37, 0.11311601160165535], ["late", 32, -0.10793510563071924], ["meet", 7, 0.0906511306449101], ["girlfriend", 15, 0.05597123478195415], ["my", 12, -0.02690616745378676], ["for", 26, -0.023913209311071357], ["to", 4, 0.010115513879729835], ["Off", 0, 0.0014354783684341066], ["a", 30, -0.000347011934504782]], 1, "Off to meet my girlfriend for a late lunch! ", raw_div, true);
+            exp.show_raw_text([["wait", 74, 0.20012880964163618], ["cant", 69, -0.09738476715928371], ["going", 46, 0.07462660216775631], ["fab", 31, 0.05979587065380409], ["ello", 16, 0.055734358491852716], ["you", 22, 0.04760057478909314], ["the", 55, -0.040602333809422325], ["tour", 59, -0.019124436957115375], ["DOI", 38, 0.01640666860479188], ["tmwr", 64, 0.010199990777224013]], 1, "@DonalMacIntyre ello  you were fab on DOI  im going to the tour tmwr cant wait!! xxx", raw_div, true);
             
         </script>
         </body></html>
