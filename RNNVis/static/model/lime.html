@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divWRH63365FR1DVS0"></div>
+        <div class="lime top_div" id="top_div4B6Q19YIV0A4K2Q"></div>
         
         <script>
-        var top_div = d3.select('#top_divWRH63365FR1DVS0').classed('lime top_div', true);
+        var top_div = d3.select('#top_div4B6Q19YIV0A4K2Q').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.9109712776468508, 0.011933640985786972, 0.01070133560681309, 0.04092904795248298, 0.002675402578535848, 0.020592940632674393, 0.0021963545968560435]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.024401718097693537, 0.03755887392831411, 0.3660904921799508, 0.008810826002669293, 0.01593721663163465, 0.051938373346934866, 0.4952624998128026]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["bought", 0.12901695886357356], ["found", 0.12311414337231062], ["ve", 0.09789322456945862], ["for", 0.07915373677138016], ["supermarket", -0.06233570715911618], ["oil", -0.044427493787189874], ["and", -0.03131394063476122], ["waiting", 0.028740052801018597], ["of", 0.018386977013698777], ["after", 0.015517954455435422]], 0, exp_div);
+                exp.show([["rain", 0.5224114797495679], ["the", 0.26939897125858475], ["football", -0.19506427907425652], ["outside", 0.19416556822115952], ["playing", -0.14652933827659512], ["children", -0.13514108375249856], ["with", -0.09182215030763179], ["in", -0.06767750495461218], ["neighbourhood", 1.3931946998250465e-05]], 6, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["bought", 41, 0.12901695886357356], ["found", 31, 0.12311414337231062], ["ve", 91, 0.09789322456945862], ["for", 107, 0.07915373677138016], ["supermarket", 77, -0.06233570715911618], ["oil", 66, -0.044427493787189874], ["and", 16, -0.03131394063476122], ["and", 37, -0.03131394063476122], ["waiting", 20, 0.028740052801018597], ["of", 55, 0.018386977013698777], ["after", 0, 0.015517954455435422]], 0, "after searching and waiting, i found and bought, a jar of coconut oil from a supermarket i've been longing for.", raw_div, true);
+            exp.show_raw_text([["rain", 32, 0.5224114797495679], ["the", 28, 0.26939897125858475], ["the", 54, 0.26939897125858475], ["football", 8, -0.19506427907425652], ["outside", 17, 0.19416556822115952], ["playing", 0, -0.14652933827659512], ["children", 42, -0.13514108375249856], ["with", 37, -0.09182215030763179], ["in", 25, -0.06767750495461218], ["in", 51, -0.06767750495461218], ["neighbourhood", 58, 1.3931946998250465e-05]], 6, "playing football outside in the rain with children in the neighbourhood.", raw_div, true);
             
         </script>
         </body></html>
