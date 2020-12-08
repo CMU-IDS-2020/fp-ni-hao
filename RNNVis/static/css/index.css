@@ -66,6 +66,37 @@
     padding:0px 10px;
     z-index: 3;
 }
+
+.s_user_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.s_model_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.s_user_choice_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.s_user_table tr {background: #CBC0D3;}
+.s_user_table tr:nth-of-type(2) {background: #EFD3D7;}
+.s_model_table tr {
+  background: white;
+}
+.s_user_table td {
+  padding: 15px;
+}
+.s_model_table td {
+  padding: 15px;
+}
+.s_user_choice_table tr{
+  background: #e6ddf0;
+}
+.s_user_choice_table td {
+  padding: 15px;
+}
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {

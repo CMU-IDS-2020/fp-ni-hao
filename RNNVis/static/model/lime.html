@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divIJEG0EQ509ICL0M"></div>
+        <div class="lime top_div" id="top_divUWON82SULMY621W"></div>
         
         <script>
-        var top_div = d3.select('#top_divIJEG0EQ509ICL0M').classed('lime top_div', true);
+        var top_div = d3.select('#top_divUWON82SULMY621W').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.00464037789327799, 0.9516606610360466, 0.0093688411093356, 0.01695769514279425, 0.0003307634515007744, 0.015934915382673238, 0.0011067459843718125]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.9279761607842373, 0.0030023758804702413, 0.018632593354031324, 0.0465947483318243, 0.0009197451568685069, 0.002209733810958544, 0.0006646426816097017]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["my", 0.3704257524146169], ["dad", 0.2462102704501253], ["see", 0.12430351444341664], ["got", -0.09776633549838933], ["at", -0.08035626915944329], ["his", 0.05472697872296195], ["and", -0.04873532615348683], ["spend", 0.037518252250452834], ["to", 0.03016026691067033], ["house", 0.023914619006727734]], 1, exp_div);
+                exp.show([["boss", 0.21691399610878426], ["annual", -0.20173161560566555], ["work", 0.13069942621525518], ["my", 0.12548967731092295], ["performance", 0.05667072273085716], ["got", 0.05631749703275131], ["review", 0.04420893071948785]], 0, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["my", 13, 0.3704257524146169], ["dad", 16, 0.2462102704501253], ["see", 9, 0.12430351444341664], ["got", 2, -0.09776633549838933], ["at", 35, -0.08035626915944329], ["his", 38, 0.05472697872296195], ["and", 20, -0.04873532615348683], ["spend", 24, 0.037518252250452834], ["to", 6, 0.03016026691067033], ["house", 42, 0.023914619006727734]], 1, "i got to see my dad and spend time at his house.", raw_div, true);
+            exp.show_raw_text([["boss", 32, 0.21691399610878426], ["annual", 56, -0.20173161560566555], ["work", 40, 0.13069942621525518], ["my", 29, 0.12548967731092295], ["performance", 63, 0.05667072273085716], ["got", 2, 0.05631749703275131], ["review", 17, 0.04420893071948785]], 0, "i got a positive review from my boss at work during our annual performance evaluation. ", raw_div, true);
             
         </script>
         </body></html>

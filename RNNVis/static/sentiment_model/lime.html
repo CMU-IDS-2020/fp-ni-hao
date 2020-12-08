@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div86OV8FG6Q6HYIOC"></div>
+        <div class="lime top_div" id="top_divLMHEPXX3JWZ8JTZ"></div>
         
         <script>
-        var top_div = d3.select('#top_div86OV8FG6Q6HYIOC').classed('lime top_div', true);
+        var top_div = d3.select('#top_divLMHEPXX3JWZ8JTZ').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.055331671199236765, 0.9446683288007632]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.03994430858433018, 0.9600556914156698]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["going", 0.08241378298432135], ["hilarious", 0.07866083419914358], ["lunch", 0.042741296232507456], ["me", -0.02567907771989553], ["that", 0.022449571142347056], ["forgive", 0.022380415027787464], ["for", -0.01194312444420112], ["is", -0.01140540464362569], ["to", -0.008155286584904968], ["now", 0.005323618026461687]], 1, exp_div);
+                exp.show([["welcome", 0.2960716719458559], ["mucvhly", -0.11243939917610747]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["going", 41, 0.08241378298432135], ["going", 67, 0.08241378298432135], ["hilarious", 26, 0.07866083419914358], ["lunch", 50, 0.042741296232507456], ["me", 84, -0.02567907771989553], ["that", 91, 0.022449571142347056], ["forgive", 76, 0.022380415027787464], ["for", 87, -0.01194312444420112], ["is", 23, -0.01140540464362569], ["to", 47, -0.008155286584904968], ["to", 73, -0.008155286584904968], ["now", 56, 0.005323618026461687]], 1, "@twicullen Yeah, Spike is hilarious! I'm going to lunch now, are u going to forgive me for that too? ", raw_div, true);
+            exp.show_raw_text([["welcome", 8, 0.2960716719458559], ["mucvhly", 0, -0.11243939917610747]], 1, "mucvhly welcome", raw_div, true);
             
         </script>
         </body></html>
