@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div4B6Q19YIV0A4K2Q"></div>
+        <div class="lime top_div" id="top_divIJEG0EQ509ICL0M"></div>
         
         <script>
-        var top_div = d3.select('#top_div4B6Q19YIV0A4K2Q').classed('lime top_div', true);
+        var top_div = d3.select('#top_divIJEG0EQ509ICL0M').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.024401718097693537, 0.03755887392831411, 0.3660904921799508, 0.008810826002669293, 0.01593721663163465, 0.051938373346934866, 0.4952624998128026]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.00464037789327799, 0.9516606610360466, 0.0093688411093356, 0.01695769514279425, 0.0003307634515007744, 0.015934915382673238, 0.0011067459843718125]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["rain", 0.5224114797495679], ["the", 0.26939897125858475], ["football", -0.19506427907425652], ["outside", 0.19416556822115952], ["playing", -0.14652933827659512], ["children", -0.13514108375249856], ["with", -0.09182215030763179], ["in", -0.06767750495461218], ["neighbourhood", 1.3931946998250465e-05]], 6, exp_div);
+                exp.show([["my", 0.3704257524146169], ["dad", 0.2462102704501253], ["see", 0.12430351444341664], ["got", -0.09776633549838933], ["at", -0.08035626915944329], ["his", 0.05472697872296195], ["and", -0.04873532615348683], ["spend", 0.037518252250452834], ["to", 0.03016026691067033], ["house", 0.023914619006727734]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["rain", 32, 0.5224114797495679], ["the", 28, 0.26939897125858475], ["the", 54, 0.26939897125858475], ["football", 8, -0.19506427907425652], ["outside", 17, 0.19416556822115952], ["playing", 0, -0.14652933827659512], ["children", 42, -0.13514108375249856], ["with", 37, -0.09182215030763179], ["in", 25, -0.06767750495461218], ["in", 51, -0.06767750495461218], ["neighbourhood", 58, 1.3931946998250465e-05]], 6, "playing football outside in the rain with children in the neighbourhood.", raw_div, true);
+            exp.show_raw_text([["my", 13, 0.3704257524146169], ["dad", 16, 0.2462102704501253], ["see", 9, 0.12430351444341664], ["got", 2, -0.09776633549838933], ["at", 35, -0.08035626915944329], ["his", 38, 0.05472697872296195], ["and", 20, -0.04873532615348683], ["spend", 24, 0.037518252250452834], ["to", 6, 0.03016026691067033], ["house", 42, 0.023914619006727734]], 1, "i got to see my dad and spend time at his house.", raw_div, true);
             
         </script>
         </body></html>
