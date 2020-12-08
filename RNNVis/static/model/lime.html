@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divBXXZD1PJQ2XYBNL"></div>
+        <div class="lime top_div" id="top_divU3DP39M9XUW44EZ"></div>
         
         <script>
-        var top_div = d3.select('#top_divBXXZD1PJQ2XYBNL').classed('lime top_div', true);
+        var top_div = d3.select('#top_divU3DP39M9XUW44EZ').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.5785654501414382, 0.23670749771572508, 0.12210561498691734, 0.02088097274556778, 0.004487878633105001, 0.03554451044001529, 0.001708075337231445]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.006293771462239595, 0.0008877450220472279, 0.0007853932676069038, 0.0029899854561533322, 0.0006696813317717081, 0.9881670962293101, 0.00020632723087115533]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["accepted", 0.22342778843538733], ["girlfriend", -0.20218345255328027], ["to", -0.11657544339407075], ["my", -0.11354050195806742], ["books", 0.10423161833234491], ["by", 0.08592035771766962], ["in", 0.07108017494112814]], 0, exp_div);
+                exp.show([["shopping", 0.519328493427137], ["want", 0.1407253810155539], ["to", 0.13877050318970663], ["i", 0.04484058105113188]], 5, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["accepted", 67, 0.22342778843538733], ["girlfriend", 41, -0.20218345255328027], ["to", 8, -0.11657544339407075], ["my", 38, -0.11354050195806742], ["books", 32, 0.10423161833234491], ["by", 76, 0.08592035771766962], ["in", 64, 0.07108017494112814]], 0, "getting to know that one of the books my girlfriend co-authored in accepted by a publisher.", raw_div, true);
+            exp.show_raw_text([["shopping", 10, 0.519328493427137], ["want", 2, 0.1407253810155539], ["to", 7, 0.13877050318970663], ["i", 0, 0.04484058105113188]], 5, "i want to shopping", raw_div, true);
             
         </script>
         </body></html>
