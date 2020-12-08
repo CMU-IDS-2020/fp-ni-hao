@@ -97,6 +97,19 @@
 .s_user_choice_table td {
   padding: 15px;
 }
+
+#easter-egg{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor: grab;
+  overflow: hidden;
+  outline:none;
+}
+#easter_link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {

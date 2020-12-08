@@ -95,7 +95,7 @@ def show_index():
     s_pred = s_model.predict(s_vectorizer.transform(s_sentence))
     s_c = make_pipeline(s_vectorizer, s_model)
     s_explainer = LimeTextExplainer(class_names=s_labels)
-    s_exp = s_explainer.explain_instance(s_sentence[0], s_c.predict_proba, labels=[0,1],num_features = 7)
+    s_exp = s_explainer.explain_instance(s_sentence[0], s_c.predict_proba, labels=[0,1],num_features = 5)
     s_exp.save_to_file('RNNVis/static/sentiment_model/lime.html', text=s_dataset["text"][s_index],labels=(s_pred[0],))
     context['s_sentence'] = s_dataset["text"][s_index]
     context['s_explanation'] = str(s_label_intdic[s_pred[0]])

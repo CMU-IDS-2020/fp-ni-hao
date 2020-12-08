@@ -639,6 +639,7 @@
         document.getElementById('user_choice_table').style.display = 'none';
         document.getElementById('s_model_table').style.display = 'none';
         document.getElementById('s_user_choice_table').style.display = 'none';
+        document.getElementById('section04').style.display = 'none';
       }
     
       function send(){
@@ -679,13 +680,38 @@
       }
     </script>
     
-    <a href="#section04"><span></span></a>
+    <a href="#section05"><span></span></a>
+  </section>
+  
+  <section id="section05" class="demo">
+    <center>
+      <br></br>
+      <h1 class = "typewriter"> 😊 How model make decisions? 😊</h1>
+    </center>
+    <a href="#section06"><span></span></a>
   </section>
 
+
+  <section id="section06" class="demo">
+    <center>
+      <br></br>
+      <h1 class = "typewriter"> 😉 Result Bar Chart 😉</h1>
+    </center>
+    <a href="#thanks"><span></span></a>
+  </section>
+
+  <section id="thanks">
+    <div>
+      <h2 class = "typewriter">😄Thank You!😉</h2>
+      <button id = "easter-egg" onClick="show_egg()" style="float: right;"><h2><a href="#section04" id="easter_link">🎉</a></h2></button>
+        <img src="https://media.giphy.com/media/l0IyiY9zRnf6nH5Cw/giphy.gif" style="width: 300px;  height: auto">
+    </div>
+  </section>
 
   <section id="section04" class="demo">
     <center>
       <br></br>
+      <h1 class = "typewriter2" style="font-size: 30px;"> 🎉 Easter Egg! 🎉</h1>
       <h1 class = "typewriter2"> 🥰 Does this sentence sounds happy or unhappy? 🥰</h1>
       <h2 class = "typewriter3"> Click 'Yes' button -> compare your choice with model's choice  </h2>
       <!-- <h2 class = "typewriter3"> Click 'switch' button -> try another one!  </h2> -->
@@ -767,6 +793,9 @@
             $("#s_lime_predict_prob .explanation").hide();
           }
       });
+      function show_egg(){
+        document.getElementById('section04').style.display = 'block'; 
+      }
       
       function s_send(){
         // show table
@@ -832,36 +861,9 @@
         document.getElementById("s_selected_word").innerHTML = result_words2;        
       });
     </script>
-    
-
-    <a href="#section05"><span></span></a>
   </section>
 
 
-  <section id="section05" class="demo">
-    <center>
-      <br></br>
-      <h1 class = "typewriter"> 😊 How model make decisions? 😊</h1>
-    </center>
-    <a href="#section06"><span></span></a>
-  </section>
-
-
-  <section id="section06" class="demo">
-    <center>
-      <br></br>
-      <h1 class = "typewriter"> 😉 Result Bar Chart 😉</h1>
-    </center>
-    <a href="#thanks"><span></span></a>
-  </section>
-
-
-  <section id="thanks">
-    <div>
-      <h2 class = "typewriter">😄Thank You!😉</h2>
-      <img src="https://media.giphy.com/media/l0IyiY9zRnf6nH5Cw/giphy.gif" style="width: 300px;  height: auto">
-    </div>
-  </section>
 </body>
 
 </html>
