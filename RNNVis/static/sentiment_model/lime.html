@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divXV6L8P0L0CBZ0NA"></div>
+        <div class="lime top_div" id="top_divOX2KZ6G3MGWXLJ6"></div>
         
         <script>
-        var top_div = d3.select('#top_divXV6L8P0L0CBZ0NA').classed('lime top_div', true);
+        var top_div = d3.select('#top_divOX2KZ6G3MGWXLJ6').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.4806334845486533, 0.5193665154513467]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.45180065364203625, 0.5481993463579637]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["think", -0.15052060514432097], ["wonderful", 0.11036464531720333], ["take", -0.08386929945482137], ["notice", -0.08205913269036291], ["moron", -0.07453781561199394]], 1, exp_div);
+                exp.show([["writer", 0.14201784880068996], ["author", -0.09150939867961959], ["presenter", -0.05730324778516798], ["m", -0.0007247877598296452], ["i", -0.000430984522156063]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["think", 24, -0.15052060514432097], ["wonderful", 30, 0.11036464531720333], ["take", 6, -0.08386929945482137], ["notice", 11, -0.08205913269036291], ["moron", 18, -0.07453781561199394]], 1, "holly take notice moron think wonderful talented", raw_div, true);
+            exp.show_raw_text([["writer", 4, 0.14201784880068996], ["author", 21, -0.09150939867961959], ["presenter", 11, -0.05730324778516798], ["m", 2, -0.0007247877598296452], ["i", 0, -0.000430984522156063]], 1, "i'm writer presenter author", raw_div, true);
             
         </script>
         </body></html>

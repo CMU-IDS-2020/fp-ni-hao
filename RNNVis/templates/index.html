@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <meta charset="utf-8" />
-  <title>RNNVis</title>
 
+  <meta charset="utf-8" />
+  <title>HAPPY</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico')}}">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/index.css')}}">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/html5reset.css')}}">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -34,7 +36,7 @@
       height: 100%;
     }
     img {
-      padding: 30px
+      padding: 20px
     }
     section {
       position: relative;
@@ -66,11 +68,11 @@
       background: rgb(242,180,118) center no-repeat;
       background-size: 1700px 800px;
     }
-    #section02 { background: rgb(228, 172, 124)  center center / cover no-repeat;}
-    #section03 { background: rgb(254, 255, 251)  center center / cover;}
-    #section04 { background: rgb(247, 235, 210)  center center / cover no-repeat;}
-    #section05 { background: rgb(248, 216, 190)  center center / cover no-repeat;}
-    #section06 { background: rgb(226, 208, 208)  center center / cover no-repeat;}
+    #section02 { background: rgb(253, 253, 253)  center center / cover no-repeat;}
+    #section03 { background: rgb(228, 172, 124)  center center / cover no-repeat;}
+    #section04 { background: rgb(247, 223, 199)  center center / cover;}
+    #section05 { background: rgb(253, 253, 253)  center center / cover no-repeat;}
+    #section06 { background: rgb(243, 198, 198)  center center / cover no-repeat;}
     /* #section10 { background: url(https://picsum.photos/1200/800?image=516) center center / cover no-repeat;} */
     #firstpage{
       position: absolute;
@@ -137,16 +139,72 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid rgb(15, 15, 15);
-      border-bottom: 1px solid rgb(20, 20, 20);
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+    #section01 a span::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       box-sizing: border-box;
     }
-
+    #section01 a span::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb01 3s infinite;
+      animation: sdb01 3s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb01 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb01 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
 
     #section02 a {
       padding-top: 60px;
@@ -155,14 +213,71 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid rgb(15, 15, 15);
-      border-bottom: 1px solid rgb(20, 20, 20);
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid rgb(77, 52, 52);
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+    #section02 a span::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid rgb(77, 52, 52);
+      border-bottom: 1px solid rgb(77, 52, 52);
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       box-sizing: border-box;
+    }
+    #section02 a span::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(109, 42, 42, 0.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb02 3s infinite;
+      animation: sdb02 3s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb02 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(109, 42, 42, 0.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb02 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(82, 27, 27, 0.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
     #section03 a {
@@ -172,14 +287,71 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid rgb(15, 15, 15);
-      border-bottom: 1px solid rgb(20, 20, 20);
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+    #section03 a span::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       box-sizing: border-box;
+    }
+    #section03 a span::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb03 3s infinite;
+      animation: sdb03 3s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb03 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb03 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
 
@@ -190,14 +362,71 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid rgb(15, 15, 15);
-      border-bottom: 1px solid rgb(20, 20, 20);
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid rgb(77, 52, 52);
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+    #section04 a span::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid rgb(77, 52, 52);
+      border-bottom: 1px solid rgb(77, 52, 52);
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       box-sizing: border-box;
+    }
+    #section04 a span::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(61, 21, 21, 0.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb04 3s infinite;
+      animation: sdb04 3s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb04 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(109, 42, 42, 0.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb04 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(109, 42, 42, 0.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
     #section05 a {
@@ -207,14 +436,71 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid rgb(15, 15, 15);
-      border-bottom: 1px solid rgb(20, 20, 20);
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid rgb(77, 52, 52);
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+    #section05 a span::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid rgb(77, 52, 52);
+      border-bottom: 1px solid rgb(77, 52, 52);
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       box-sizing: border-box;
+    }
+    #section05 a span::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(73, 28, 28, 0.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb05 3s infinite;
+      animation: sdb05 3s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb05 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(109, 42, 42, 0.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb05 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(109, 42, 42, 0.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
 
@@ -225,14 +511,71 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid rgb(15, 15, 15);
-      border-bottom: 1px solid rgb(20, 20, 20);
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+    #section06 a span::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       box-sizing: border-box;
+    }
+    #section06 a span::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb06 3s infinite;
+      animation: sdb06 3s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb06 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes sdb06 {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
     }
   </style>
   
@@ -356,7 +699,7 @@
     .typewriter2{
       font-family: chalkduster, fantasy;
       font-size: 30px;
-      color: rgb(139, 46, 151);
+      color: rgb(155, 64, 11);
       letter-spacing: .17em;
       margin: 0 auto;
       overflow: hidden;
@@ -374,6 +717,9 @@
       white-space: nowrap;
       border-right: .17em solid pink;
       animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+    }
+    h3{
+      font-family: chalkduster, fantasy;
     }
 
     .search-result{
@@ -436,7 +782,12 @@
     }
     .sec2_text {
       font-family: chalkduster, fantasy;
-      color: white;
+      color:rgb(146, 61, 11);
+    }
+    .sec2_text2 {
+      padding: 10px;
+      font-family: chalkduster, fantasy;
+      color: rgb(73, 29, 29);
     }
 
     .img{
@@ -451,6 +802,7 @@
     }
     table {opacity: 0.8}
   </style>
+
 </head>
  
 <body onload="javascript:hideTable()">
@@ -474,20 +826,22 @@
     <h2 class = "search-result" ><span style="color: green;">Christ</span><span style="color: red;">mas</span> is coming! A good time to summarize your 2020 experience.</h2>
 
     </center>
-    <img id="firstpage" src="https://www.linkpicture.com/q/FirstPage_cut.jpg" height="260px" width=700px >
+    <img id="firstpage" src="https://www.linkpicture.com/q/FirstPage_cut.jpg" height="38%" width="45%" >
     <a href="#section02"><span></span></a >
     </section>
 
   <section id="section02" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter"> 😊 Source of Happiness 😊 </h1>
+      <h1 class = "typewriter2"> 🥰 It's almost Christmas! 🥰 </h1>
     </center>
-    <center><img src="https://www.linkpicture.com/q/SecondPage.png" height="400px" width="600px"></center>
+    <center><img src="https://www.linkpicture.com/q/Picture1_15.jpg" height="35%" width="35%"></center>
     <center>
-      <p class = "sec2_text">Here we introduce 7 common sources of happiness:</p> 
-      <b class = "sec2_text">bonding 🤝, affection 🥰, achievement 🎉, nature 🌲, leisure 😎, exercise 🏋️ and enjoy the moment 😮</b>
+      <p class = "sec2_text2">2020 has been tough but I’d hope you’ve still got some moments filled with HAPPINESS this past
+         year. <br> However, we’ve barely wondered about the true causes of these sentiments. <br> Luckily, Christmas is coming and Santa 
+         is going to tell you WHY you feel HAPPY 😊 </p> 
     </center>
+    
     <a href="#section03"><span></span></a>
 
   </section>
@@ -495,9 +849,23 @@
   <section id="section03" class="demo">
     <center>
       <br></br>
+      <h1 class = "typewriter2"> 😊 Source of Happiness 😊 </h1>
+    </center>
+    <center><img src="https://www.linkpicture.com/q/SecondPage.png" height="40%" width="40%"></center>
+    <center>
+      <p class = "sec2_text">Here we introduce 7 common sources of happiness:</p> 
+      <b class = "sec2_text">bonding 🤝, affection 🥰, achievement 🎉, nature 🌲, leisure 😎, exercise 🏋️ and enjoy the moment 😮</b>
+      <p class = "sec2_text">In the next section, you will get the chance to explore the sources of happiness for different sentences by yourself🎉</p>
+    </center>
+    <a href="#section05"><span></span></a>
+
+  </section>
+
+
+  <section id="section05" class="demo">
+    <center>
+      <br></br>
       <h1 class = "typewriter2"> 😎 Which source of happiness does this sentence belong to? 😎</h1>
-      <h2 class = "typewriter3"> Click 'Yes' button -> compare your choice with model's choice  </h2>
-      <h2 class = "typewriter3"> Click 'switch' button -> try another one!  </h2>
     </center>
     <div>
       <table class="user_table">
@@ -680,40 +1048,42 @@
       }
     </script>
     
-    <a href="#section05"><span></span></a>
+    <a href="#section06"><span></span></a>
   </section>
   
-  <section id="section05" class="demo">
+  <section id="section06" class="demo">
     <center>
       <br></br>
       <h1 class = "typewriter"> 😊 How model make decisions? 😊</h1>
     </center>
-    <a href="#section06"><span></span></a>
+    <a href="#thanks"><span></span></a>
   </section>
 
 
-  <section id="section06" class="demo">
+  <!-- <section id="section06" class="demo">
     <center>
       <br></br>
       <h1 class = "typewriter"> 😉 Result Bar Chart 😉</h1>
     </center>
     <a href="#thanks"><span></span></a>
-  </section>
+  </section> -->
 
   <section id="thanks">
     <div>
       <h2 class = "typewriter">😄Thank You!😉</h2>
-      <button id = "easter-egg" onClick="show_egg()" style="float: right;"><h2><a href="#section04" id="easter_link">🎉</a></h2></button>
-        <img src="https://media.giphy.com/media/l0IyiY9zRnf6nH5Cw/giphy.gif" style="width: 300px;  height: auto">
+      <button id = "easter-egg" onClick="show_egg()" style="float: right;"><a href="#section04" id="easter_link"> <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"> <h3>Click Me!</h3></a></button>
+      
+      <!-- <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"> -->
+      <img src="https://media.giphy.com/media/l0IyiY9zRnf6nH5Cw/giphy.gif" style="width: 300px;  height: auto">
     </div>
   </section>
 
   <section id="section04" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter2" style="font-size: 30px;"> 🎉 Easter Egg! 🎉</h1>
-      <h1 class = "typewriter2"> 🥰 Does this sentence sounds happy or unhappy? 🥰</h1>
-      <h2 class = "typewriter3"> Click 'Yes' button -> compare your choice with model's choice  </h2>
+      <h1 class = "typewriter2" style="font-size: 30px;"> 🍪 Christmas Cookie! 🍪</h1>
+      <h1 class = "typewriter2"> 🥰 Does this sentence sound happy or unhappy? 🥰</h1>
+      <!-- <h2 class = "typewriter3"> Click 'Yes' button -> compare your choice with model's choice  </h2> -->
       <!-- <h2 class = "typewriter3"> Click 'switch' button -> try another one!  </h2> -->
     </center>
 
@@ -751,15 +1121,12 @@
             <h3 id="s_modeloutput"> Model Output: </h3>
             <div id = "s_test2"> </div>
             <br>
-            <p id = "s_model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized sentiment of the tweet as <strong>{{s_explanation}}</strong>.
-              <br></br>
-              The ground truth category of the sentiment: <strong>{{s_true_label}}</strong>.   
-            </p>
-
+            <p id = "s_model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized sentiment of the tweet as <strong>{{s_explanation}}</strong>. </p>
+            <p> The ground truth category of the sentiment: <strong>{{s_true_label}}</strong>.   </p>
           </td>
           <td width = "55%;" id="td2">
             <div id = "s_lime_explanation"> </div>
-            <div id = "s_lime_predict_prob"> </div>       
+            <div id = "s_lime_predict_prob"> </div> 
           </td>
         </tr>
       </table>
