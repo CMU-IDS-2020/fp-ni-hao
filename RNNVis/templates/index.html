@@ -790,6 +790,16 @@
       color: rgb(73, 29, 29);
     }
 
+    .sec6_text {
+      font-family: chalkduster, fantasy;
+      color:rgb(146, 61, 11);
+    }
+    .sec6_text2 {
+      padding-top: 10px;
+      font-family: chalkduster, fantasy;
+      color: rgb(73, 29, 29);
+    }
+
     .img{
       border:0;
     }
@@ -903,10 +913,10 @@
       <table class="model_table" id="model_table">
         <tr>
           <td width = "45%;" style="vertical-align: top;" id="td1">
-            <h3 id="modeloutput"> Model Output: </h3>
+            <h3 id="modeloutput"> Santa's Suggestion: </h3>
             <div id = "test2"> </div>
             <br>
-            <p id = "model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized its happy source as <strong>{{explanation}}</strong>.
+            <p id = "model_pred"> Above is the visualization of Santa's reponse. Based on the sentence, Santa thought its happy source is <strong>{{explanation}}</strong>.
               <br></br>
               The ground truth category of the happy source: <strong>{{true_label}}</strong>.
             </p>
@@ -1054,8 +1064,17 @@
   <section id="section06" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter"> 😊 How model make decisions? 😊</h1>
+      <h1 class = "typewriter"> 🤫 Santa's Secret 🤫</h1>
     </center>
+    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="60%" width="60%"></center>
+    <center> <p class = "sec6_text">Surprise! It's 🤖 acting as Santa.</p> </center>
+    <p class = "sec6_text2">To perform well on happiness source prediction, 🤖 learned by:</p>
+    <ul class = "sec6_text2" style="margin-left: 30px;">
+      <li>Spell-checking, lower-casing, and removing one-word moments etc., to clean the happy moments.</li>
+      <li>Vectorizing the moments with n-gram (1-3) to keep track of the word context. </li>
+      <li>Taking in the vectors with their ground-truth happiness sources to train a prediction model.</li>
+      <li>Having attempted both linear regression (LR) and DL networks, 🤖 found LR as well-performed and interpretable.  </li>
+    </ul>
     <a href="#thanks"><span></span></a>
   </section>
 
@@ -1136,8 +1155,7 @@
         <tr>
           <td width = 1470px>
             <h3> Conclusion: </h3>
-            <p> Your selected words are <span id="s_selected_word"></span>. </p>
-            <p> You think the source of happiness for this sentence is <span id="s_checked_label">. </span></p>
+            <p style="font-family: chalkduster, fantasy;"> We hope a cheery Christmas holds lots of <span style="color: red;">happi</span><span style="color: green;">ness</span> for you!</p>
           </td>
           
         </tr>

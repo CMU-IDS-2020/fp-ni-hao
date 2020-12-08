@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divMJXKTZDU7PWPZSA"></div>
+        <div class="lime top_div" id="top_divBA68P7UVNOIQZTS"></div>
         
         <script>
-        var top_div = d3.select('#top_divMJXKTZDU7PWPZSA').classed('lime top_div', true);
+        var top_div = d3.select('#top_divBA68P7UVNOIQZTS').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.7833047245433824, 0.05684090535977905, 0.014790018205161537, 0.07940795889597203, 0.0018476158536026945, 0.05248307057947462, 0.011325706562627644]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.964441457180743, 0.013212719533377678, 0.004069937768919908, 0.0050990982705668274, 0.0031752613741737328, 0.008294176130025607, 0.0017073497421931612]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["the", -0.19151341028883995], ["win", 0.18302223147856492], ["managed", 0.15368947612441405], ["winning", 0.09383626021404537], ["very", 0.09264284526243931], ["basketball", 0.07551345036356469], ["happy", -0.06922342860427382]], 0, exp_div);
+                exp.show([["passed", 0.22198872360523175], ["test", 0.05519376339657417], ["school", 0.017461813911352018], ["difficult", -0.010806864012604707], ["in", 0.010238518364300118], ["a", 0.0026071739254865055], ["i", 0.002529974993588842]], 0, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["the", 67, -0.19151341028883995], ["the", 109, -0.19151341028883995], ["the", 132, -0.19151341028883995], ["win", 128, 0.18302223147856492], ["managed", 117, 0.15368947612441405], ["winning", 148, 0.09383626021404537], ["very", 80, 0.09264284526243931], ["very", 167, 0.09264284526243931], ["basketball", 9, 0.07551345036356469], ["happy", 172, -0.06922342860427382]], 0, "we had a basketball match against our toughest opponent last week. the game was very tough and we somehow in the end managed to win the match. that winning moment was very happy for me and our team. ", raw_div, true);
+            exp.show_raw_text([["passed", 2, 0.22198872360523175], ["test", 21, 0.05519376339657417], ["school", 29, 0.017461813911352018], ["difficult", 11, -0.010806864012604707], ["in", 26, 0.010238518364300118], ["a", 9, 0.0026071739254865055], ["i", 0, 0.002529974993588842]], 0, "i passed a difficult test in school.", raw_div, true);
             
         </script>
         </body></html>
