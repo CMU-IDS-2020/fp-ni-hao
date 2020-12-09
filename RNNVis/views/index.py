@@ -67,7 +67,7 @@ def show_index():
     pred = lr_model.predict(lr_vectorizer.transform(sentence))
     c = make_pipeline(lr_vectorizer, lr_model)
     explainer = LimeTextExplainer(class_names=labels)
-    exp = explainer.explain_instance(sentence[0], c.predict_proba, labels=[0,1,2,3,4,5,6], num_features = 7)
+    exp = explainer.explain_instance(sentence[0], c.predict_proba, labels=[0,1,2,3,4,5,6], num_features = 5)
     exp.save_to_file('RNNVis/static/model/lime.html', text=sentence[0],labels=(labeldict[pred[0]],))
     # context['lime_html']=exp.as_html(text=sentence[0],labels=(labeldict[pred[0]],))
     # word_weight = exp.as_list(label=labeldict[pred[0]])

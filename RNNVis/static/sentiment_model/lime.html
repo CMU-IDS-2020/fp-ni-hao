@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div3TKI4X44S08G5JO"></div>
+        <div class="lime top_div" id="top_divJGTQ25KC54REA6U"></div>
         
         <script>
-        var top_div = d3.select('#top_div3TKI4X44S08G5JO').classed('lime top_div', true);
+        var top_div = d3.select('#top_divJGTQ25KC54REA6U').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.10194587181923487, 0.8980541281807651]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.2669382757671803, 0.7330617242328197]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["happy", 0.3195035583464663], ["make", 0.09110460340478241], ["today", -0.0604426548388033], ["chorus", -0.002547156875992227]], 1, exp_div);
+                exp.show([["tea", 0.316866763656142], ["home", 0.043146750597453376], ["drinking", -0.025841067728151684]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["happy", 18, 0.3195035583464663], ["make", 13, 0.09110460340478241], ["today", 7, -0.0604426548388033], ["chorus", 0, -0.002547156875992227]], 1, "chorus today make happy", raw_div, true);
+            exp.show_raw_text([["tea", 14, 0.316866763656142], ["home", 0, 0.043146750597453376], ["drinking", 5, -0.025841067728151684]], 1, "home drinking tea", raw_div, true);
             
         </script>
         </body></html>
