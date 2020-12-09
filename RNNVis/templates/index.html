@@ -429,7 +429,10 @@
       }
     }
 
-    #section05 a {
+    #section05 a.barchart {
+      margin-top: 40px;
+    }
+    #section05 a.nextsec {
       padding-top: 60px;
     }
     #section05 a span {
@@ -623,18 +626,32 @@
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
     }
-
+    #barchart-button {
+            background-color: #612913;
+            position: relative;
+            padding: 5px;
+            border-radius: 8px;
+            font: normal 400 10px/1 'chalkduster', fantasy;
+            border: none;
+            color: white;
+            /* padding: 5px 5px; */
+            text-align: center;
+            text-decoration: none;
+            /* display: inline-block;  */
+            font-size: 16px;
+            left: 0px;
+        }
+    #barchart-button:hover {opacity: 1}
     .button{
       background-color: #8E9AAF;
       border: none;
       color: white;
-      padding: 10px 25px;
+      padding: 10px 15px;
       text-align: center;
-      font-size: 18px;
+      font-size: 15px;
       margin: 4px 2px;
       opacity: 0.6;
       transition: 0.3s;
-      display: inline-block;
       text-decoration: none;
       cursor: pointer;
     }
@@ -821,8 +838,8 @@
     <div id="snowMask"></div>
     <center>
       <br></br>
-      <h1 class = "typewriter"> 😊 Explaining Sentiment Analysis 😊 </h1>
-      <h2 class = "typewriter"> Why are you feeling happy? </h2>
+      <!-- <h1 class = "typewriter"> 😊 Explaining Sentiment Analysis 😊 </h1> -->
+      <h1 class = "typewriter"> Why are you feeling happy? </h1>
       <br></br>
       <div id="search">
         <form action="" method="post" class="flex-container">
@@ -843,7 +860,7 @@
   <section id="section02" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter2"> 🥰 It's almost Christmas! 🥰 </h1>
+      <h1 class = "typewriter2"> It's almost Christmas! </h1>
     </center>
     <center><img src="https://www.linkpicture.com/q/Picture1_15.jpg" height="35%" width="35%"></center>
     <center>
@@ -859,7 +876,7 @@
   <section id="section03" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter2"> 😊 Source of Happiness 😊 </h1>
+      <h1 class = "typewriter2"> Source of Happiness</h1>
     </center>
     <center><img src="https://www.linkpicture.com/q/SecondPage.png" height="40%" width="40%"></center>
     <center>
@@ -867,7 +884,7 @@
       <b class = "sec2_text">bonding 🤝, affection 🥰, achievement 🎉, nature 🌲, leisure 😎, exercise 🏋️ and enjoy the moment 😮</b>
       <p class = "sec2_text">In the next section, you will get the chance to explore the sources of happiness for different sentences by yourself🎉</p>
     </center>
-    <a href="#section05"><span></span></a>
+    <a href="#section05" class="nextsec"><span></span></a>
 
   </section>
 
@@ -875,7 +892,7 @@
   <section id="section05" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter2"> 😎 Which source of happiness does this sentence belong to? 😎</h1>
+      <h1 class = "typewriter2"> Which source of happiness does this sentence belong to?</h1>
     </center>
     <div>
       <table class="user_table">
@@ -890,7 +907,7 @@
           <td width="250px">
             <p> <b>Which source of happiness?</b> </p>
             {% for i in range(0,7) %}
-                <input type="radio" id = "{{i}}" value="{{label_intdic[i]}}" name="{{label_intdic[i]}}">
+                <input type="radio" id = "{{i}}" value="{{label_intdic[i]}}" name="radio">
                 <label for="i">{{label_intdic[i]}}</label><br>
             {% endfor %}
             
@@ -912,7 +929,7 @@
 
       <table class="model_table" id="model_table">
         <tr>
-          <td width = "45%;" style="vertical-align: top;" id="td1">
+          <td width = "640px;" style="vertical-align: top;" id="td1">
             <h3 id="modeloutput"> Santa's Suggestion: </h3>
             <div id = "test2"> </div>
             <br>
@@ -922,7 +939,7 @@
             </p>
 
           </td>
-          <td width = "55%;" id="td2">
+          <td width = "790px;" id="td2">
             <div id = "lime_explanation"> </div>
             <div id = "lime_predict_prob"> </div>       
           </td>
@@ -936,10 +953,11 @@
             <h3> Conclusion: </h3>
             <p> Your selected words are <span id="result_words"></span>. </p>
             <p> You think the source of happiness for this sentence is <span id="checked_label">. </span></p>
+            <p> <br>Do you see anything interesting? Do you find any correlations between highlighted words and the final output?🤔 Keep playing!</p>
+            <a href="{{ url_for('show_barchart') }}" id="barchart-button" class="barchart"> Nah I'm done with this, show me something else! </a> 
           </td>
-          
         </tr>
-        
+
       </table>
     </div>
     
@@ -1058,18 +1076,18 @@
       }
     </script>
     
-    <a href="#section06"><span></span></a>
+    <a href="#section06" class="nextsec"><span></span></a>
   </section>
   
   <section id="section06" class="demo">
     <center>
       <br></br>
-      <h1 class = "typewriter"> 🤫 Santa's Secret 🤫</h1>
+      <h1 class = "typewriter"> Santa's Secret</h1>
     </center>
-    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="60%" width="60%"></center>
+    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="50%" width="50%"></center>
     <center> <p class = "sec6_text">Surprise! It's 🤖 acting as Santa.</p> </center>
-    <p class = "sec6_text2">To perform well on happiness source prediction, 🤖 learned by:</p>
-    <ul class = "sec6_text2" style="margin-left: 30px;">
+    <p class = "sec6_text2" style="margin-left: 60px;"> To perform well on happiness source prediction, 🤖 learned by:</p>
+    <ul class = "sec6_text2" style="margin-left: 90px;">
       <li>Spell-checking, lower-casing, and removing one-word moments etc., to clean the happy moments.</li>
       <li>Vectorizing the moments with n-gram (1-3) to keep track of the word context. </li>
       <li>Taking in the vectors with their ground-truth happiness sources to train a prediction model.</li>
@@ -1078,19 +1096,10 @@
     <a href="#thanks"><span></span></a>
   </section>
 
-
-  <!-- <section id="section06" class="demo">
-    <center>
-      <br></br>
-      <h1 class = "typewriter"> 😉 Result Bar Chart 😉</h1>
-    </center>
-    <a href="#thanks"><span></span></a>
-  </section> -->
-
   <section id="thanks">
     <div>
       <h2 class = "typewriter">😄Thank You!😉</h2>
-      <button id = "easter-egg" onClick="show_egg()" style="float: right;"><a href="#section04" id="easter_link"> <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"> <h3>Click Me!</h3></a></button>
+      <button id = "easter-egg" onClick="show_egg()" style="float: right;"><a href="#section04" id="easter_link"> <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"><h3> Bonus Task! Click Me!</h3></a></button>
       
       <!-- <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"> -->
       <img src="https://media.giphy.com/media/l0IyiY9zRnf6nH5Cw/giphy.gif" style="width: 300px;  height: auto">
@@ -1101,7 +1110,7 @@
     <center>
       <br></br>
       <h1 class = "typewriter2" style="font-size: 30px;"> 🍪 Christmas Cookie! 🍪</h1>
-      <h1 class = "typewriter2"> 🥰 Does this sentence sound happy or unhappy? 🥰</h1>
+      <h1 class = "typewriter2"> Does this sentence sound happy or unhappy?</h1>
       <!-- <h2 class = "typewriter3"> Click 'Yes' button -> compare your choice with model's choice  </h2> -->
       <!-- <h2 class = "typewriter3"> Click 'switch' button -> try another one!  </h2> -->
     </center>
@@ -1120,9 +1129,9 @@
           </td>
           <td width="250px">
             <p> <b>Positive or negative sentiment?</b> </p>          
-            <input type="radio" id = "s_0" value="unhappy" name="unhappy">
+            <input type="radio" id = "s_0" value="unhappy" name="radio">
             <label for="s_0">unhappy</label><br>
-            <input type="radio" id = "s_1" value="happy" name="happy">
+            <input type="radio" id = "s_1" value="happy" name="radio">
             <label for="s_1">happy</label><br>
             
           </td>
@@ -1136,14 +1145,14 @@
 
       <table class="model_table" id="s_model_table">
         <tr>
-          <td width = "45%;" style="vertical-align: top;" id="td1">
+          <td width = "640px;" style="vertical-align: top;" id="td1">
             <h3 id="s_modeloutput"> Model Output: </h3>
             <div id = "s_test2"> </div>
             <br>
             <p id = "s_model_pred"> Above is the visualization of the model's output. Based on the sentence, the model has categorized sentiment of the tweet as <strong>{{s_explanation}}</strong>. </p>
             <p> The ground truth category of the sentiment: <strong>{{s_true_label}}</strong>.   </p>
           </td>
-          <td width = "55%;" id="td2">
+          <td width = "790px;" id="td2">
             <div id = "s_lime_explanation"> </div>
             <div id = "s_lime_predict_prob"> </div> 
           </td>
