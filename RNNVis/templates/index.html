@@ -830,7 +830,6 @@
 </head>
  
 <body onload="javascript:hideTable()">
-  <!-- <body> -->
   <section id="section01" class="demo">
     <div id="snowMask"></div>
     <center>
@@ -854,7 +853,7 @@
     </center>
     <img id="firstpage" src="https://www.linkpicture.com/q/FirstPage_cut.jpg" height="38%" width="45%" >
     <a href="#section02"><span></span></a >
-    </section>
+  </section>
 
   <section id="section02" class="demo">
     <center>
@@ -1034,7 +1033,8 @@
         document.getElementById('user_choice_table').style.display = 'none';
         document.getElementById('s_model_table').style.display = 'none';
         document.getElementById('s_user_choice_table').style.display = 'none';
-        document.getElementById('section04').style.display = 'none';
+        document.getElementById('section04').style.display = 'none';      
+        // $(window).scrollTop(0);
       }
     
       function send(){
@@ -1083,7 +1083,7 @@
       <br></br>
       <h1 class = "typewriter"> Santa's Secret</h1>
     </center>
-    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="50%" width="50%"></center>
+    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="45%" width="45%"></center>
     <center> <p class = "sec6_text">Surprise! It's 🤖 acting as Santa.</p> </center>
     <p class = "sec6_text2" style="margin-left: 60px;"> To perform well on happiness source prediction, 🤖 learned by:</p>
     <ul class = "sec6_text2" style="margin-left: 90px;">
@@ -1098,7 +1098,10 @@
   <section id="thanks">
     <div>
       <h2 class = "typewriter">😄Thank You!😉</h2>
-      <button id = "easter-egg" onClick="show_egg()" style="float: right;"><a href="#section04" id="easter_link"> <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"><h3> Bonus Task! Click Me!</h3></a></button>
+      <button id = "easter-egg" onClick="show_egg()" style="float: right;">
+          <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto">
+          <h3> Bonus Task! Click Me!</h3>
+      </button>
       
       <!-- <img src="https://linkpicture.com/q/cookie.gif" style="width: 100px;  height: auto"> -->
       <img src="https://media.giphy.com/media/l0IyiY9zRnf6nH5Cw/giphy.gif" style="width: 300px;  height: auto">
@@ -1123,7 +1126,6 @@
             </h3>
             <p style="color: #8E9AAF;font-size: 16px;"> Click to highlight the critical words</p>
             <h5> {{s_sentence}} </h4>
-            <p> Your current selected words is: <span id="selected_word2"></span></p>
             
           </td>
           <td width="250px">
@@ -1188,6 +1190,7 @@
       });
       function show_egg(){
         document.getElementById('section04').style.display = 'block'; 
+        window.scrollTo(0,document.body.scrollHeight);
       }
       
       function s_send(){
@@ -1255,7 +1258,6 @@
       });
     </script>
   </section>
-
 
 </body>
 

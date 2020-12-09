@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div7CCGI4OZOKVKYRQ"></div>
+        <div class="lime top_div" id="top_div6BSXILH5A5HQK81"></div>
         
         <script>
-        var top_div = d3.select('#top_div7CCGI4OZOKVKYRQ').classed('lime top_div', true);
+        var top_div = d3.select('#top_div6BSXILH5A5HQK81').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.6208158775233403, 0.3791841224766596]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.1395596956043469, 0.8604403043956531]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["can", 0.3920085548035601], ["buffalo", -0.22822143852680338], ["luck", -0.08390730370001838], ["believe", -0.07633110902952828], ["t", 0.023044094029104092]], 0, exp_div);
+                exp.show([["nice", 0.10399595713142933], ["session", 0.07697663913357819], ["attack", -0.04976224088665274], ["hacker", -0.03382005025821716], ["spbpuk", 0.022793371062952643]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["can", 0, 0.3920085548035601], ["buffalo", 19, -0.22822143852680338], ["luck", 27, -0.08390730370001838], ["believe", 6, -0.07633110902952828], ["t", 4, 0.023044094029104092]], 0, "can't believe snow buffalo luck", raw_div, true);
+            exp.show_raw_text([["nice", 18, 0.10399595713142933], ["session", 29, 0.07697663913357819], ["attack", 11, -0.04976224088665274], ["hacker", 37, -0.03382005025821716], ["spbpuk", 56, 0.022793371062952643]], 1, "zero click attack nice swear session hacker kid #spbpc #spbpuk", raw_div, true);
             
         </script>
         </body></html>

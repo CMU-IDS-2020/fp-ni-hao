@@ -116,7 +116,7 @@ def show_index():
         search_pred = lr_model.predict(lr_vectorizer.transform([query]))
         context['search_query'] = query
         context['search_label'] = str(search_pred[0])
-        print(context['search_label'])
+        return flask.render_template("index.html", **context)
 
     return flask.render_template("index.html", **context)
 
