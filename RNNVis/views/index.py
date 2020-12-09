@@ -119,3 +119,7 @@ def show_index():
         print(context['search_label'])
 
     return flask.render_template("index.html", **context)
+
+@RNNVis.app.route('/barchart', methods=['GET', 'POST'])
+def show_barchart():
+    return flask.render_template("barchart.html")

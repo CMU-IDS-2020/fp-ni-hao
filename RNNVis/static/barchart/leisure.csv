@@ -1,0 +1,281 @@
+word,size,eg,counter_eg,note
+went,153,"I went to music class.
+I was happy when I went to a baseball game
+I WENT TO SHOPPING MALL
+Went on a 5 day solo backpacking trip in South Carolina.
+I went to Paris for vacation.
+I WENT TO  TEMPLE.
+I went for a trip.
+I went out to my favorite restaurant.
+I went to see Green Day in concert.
+I went shopping","I went to visit my girlfriend who lives far away|affection
+I went out driving with one of my friends|bonding
+I went to dinner with my wife and our friends at a nice restaurant|affection
+I went to dinner with my friends.|bonding
+My friend and I went to lunch and talked about our college days.|bonding",'went' is the top 1 frequently used word for leisure
+game,133,"I started playing a really fun game on my iPhone.
+I bought the game Horizon Zero Dawn and was blown away by how beautiful it was.
+I had some fun playing a good video game.
+I reached a high level status in a competitive online game that i play every week.
+A game came out that I enjoy playing.
+I read up on the patch notes for my game.
+I got to play a new video game last night uninterrupted for more than an hour.
+I got a new game on my phone and really enjoy it
+I received a better controller for my new video game system.
+I nan a D&d game that turned out to be very fun.","I was able to coach my youngest son in his t-ball game.|affection
+My daughter scored 2 goals at her Lacrosse game|affection
+Last night I played in a board game tournament and won first place.|achievement
+Purchased new video game.|achievement
+I bought my ps4, got some money and i bought my new video game.|achievement",'game' is the top 2 frequently used word for leisure
+watched,125,"Watched a new comedy special on Netflix for a favorite comedian of mine.
+I watched a very exciting soccer match last week.
+I watched a comedy program.
+I watched the season finale of one of my favorite tv shows.
+I watched The Masters golf tournament on television.
+I took a day off and watched kdramas and had pizza.
+I watched Breaking Bad.
+I watched a cute video of a girl mistaking a water heater for a robot.
+When I watched Guardians of the Galaxy 2.
+Watched a bunch of Kendrick Lamar video's waiting for his new Album to come out tomorrow!","My three year old son and I watched a movie together, cuddled, and ate popcorn.|affection
+I watched a DVD with my kids at their dance show.|affection
+I took a walk in the park early this morning and watched the sun rise over the river.|nature
+I watched my girlfriend's stepbrother at swim practice.|affection
+I watched a family movie with my kids.|affection",'watched' is the top 3 frequently used word for leisure
+new,115,"I WENT TO SAW  NEW RELEASE MOVIE.
+I downloaded new music to my ipod for the first time in months.
+A new game in the series I like got announced to be coming this year.
+I had a quiet hour to start reading a new book that I'd been looking forward to beginning.
+Getting new strings for my guitar.
+I read brand new chapters of several manga that were released today.
+I tried my new rollerblades in the park and they worked really well.
+I discovered a new to me TV series to binge watch and still have at least a week's more viewing.
+I bought a new controller (Red Gear) to play games on my laptop.
+Started a new game that I have been waiting a long time to play.","I bought a new car!|achievement
+I learned about a new was to search for volunteer work.|achievement
+I was happy when I caught a new species of fish at my local creek last week.|achievement
+I played with my friend's new puppy.|bonding
+I toured the local area  on my motorcycle with a friend and new rider.|bonding",'new' is the top 4 frequently used word for leisure
+favorite,109,"I WENT TO MY FAVORITE RESTAURANT AND HAD MY FAVORITE DISH
+I drank a beer from my favorite brewery.
+Going to a concert to see one of my favorite bands live.
+I watched the season finale of one of my favorite tv shows.
+Favorite show was on TV.
+I watched a new episode of one of my favorite TV shows that went off the air over 25 years ago.
+I went to Opening Day of baseball season and saw my favorite team win the game.
+Another game in one of my favorite video game series was announced the other day.
+I got caught up on my favorite podcast this week.
+I got to binge-watch my favorite show on Netflix all night yesterday, and I indulged.","Eating fried chicken. It was from my favorite fast-food restaurant.|enjoy_the_moment
+My wife wear her favorite saree for office meeting.|affection
+I went to one of my favorite taco restaurants and ordered a new burrito on their menu.|enjoy_the_moment
+when my mom made me my favorite meatball sphaghetti.|affection
+Another event that made me happy was watching my favorite baseball team win.|enjoy_the_moment",'favorite' is the top 5 frequently used word for leisure
+got,100,"I got off of work, it took quite a while.
+I got caught up on my favorite podcast this week.
+I got my favorite ice cream from the ice cream parlor
+I got tickets to a concert of one of my favorite bands.
+When I finally got to see guardians of the galaxy 2.
+I got laid this morning why lie,
+I got to play a new video game last night uninterrupted for more than an hour.
+I had the house to myself for a few hours and got to relax.
+I was happy because I got a new game for my Xbox
+I got to sleep in uninterrupted one morning.","I got a new part time job.|achievement
+I am so happy because my husband got promoted at work, seeing him excel is something I live for.|affection
+I got a new phone for my birthday.|achievement
+My sister has got delivered a male child made me very happy.|affection
+It made me very happy when my son got accepted to an outstanding college.|affection",'got' is the top 6 frequently used word for leisure
+movie,86,"Watched the ongoing blockbuster movie in theater
+yesterday i watched latest movie beauty and the beast.
+I watched a good movie last night before going to bed.
+When I was finally able to watch the movie, Fallen.
+I watched a really good movie a few hours ago
+I went to movie. This movie was excellent which made me happy
+I went to the cinema. And saw the movie Fast and Furious 8.
+I streamed a movie online.
+I went to the movie theater.
+Finally seeing the Logan movie","Sometimes I go to my boyfriend's house to have dinner and watch tv or a movie.|affection
+Saw a new movie in the theater (it has been years)|enjoy_the_moment
+I hung out with some friends and watched the new Alien movie and enjoyed it a lot.|bonding
+Hanging out with my girlfriend and watching a movie with her.|affection
+I went for a movie with friends.|bonding",'movie' is the top 7 frequently used word for leisure
+show,84,"I was able to watch my favorite show, which I hadn't had time for in a while.
+Found out my favorite TV show is going to start in a month
+I bought MLB 17 the Show for my PlayStation 4.
+My favorite tv show is on tonight!!
+Re-watched a favorite TV show.
+Went to a comedy show.
+I was happy to watch Master of None; it's a pretty good show.
+I was able to watch a new episode of my favorite show
+abc season end show will be good to watch
+A new episode of a television show that I enjoy aired and I watched it.","I talked a friend in to watching my favorite tv show, Wentworth.|bonding
+Last Saturday, I went to a local punk show with many of my friends in attendance.|bonding
+My daughter said ""Blue's Clues"" which is her favorite show.|affection
+My wife decided to start binge watching the office again, and i love that show.|affection
+My favorite show came back on netflix|enjoy_the_moment",'show' is the top 8 frequently used word for leisure
+happy,69,"Traveling to Alabama to visit a casino made me happy.
+I went on a trip to Goa two months ago and I was happy.
+I was happy when I went to a baseball game
+I was happy to spend a day shopping by myself without the distraction of my kids
+Another thing that made me happy is eating spaghetti and then having some chocolate chip cookies.
+I went to movie. This movie was excellent which made me happy
+Going to starbucks and drinking a latte made me happy.
+Watching one of my favorite TV episodes made me happy.
+I sat on the porch and read a book, which made me happy because I don't get to do that a lot.
+One event that made me happy was when I was able to reach a certain threshold in my video game.","I was happy when the Mets came from behind to beat the Cubs.|enjoy_the_moment
+i am very happy in mobile game and tv shows|enjoy_the_moment
+While walking on roadside I got some money on the roadside, that moment make me feel happy.|enjoy_the_moment
+Something that made me happy today was buying a new bed.|achievement
+I AM SO HAPPY AND ENJOYING BECAUSE SPEND MY FAMILY MEMBERS.THAT MOMENT IS THE BEST|affection",'happy' is the top 9 frequently used word for leisure
+video,64,"When I won in video game with my friends.
+I received a better controller for my new video game system.
+I got to play a new video game last night uninterrupted for more than an hour.
+A video game I play had a new expansion come out.
+I finished a very good video game.
+I played video games.
+I watched a funny video on Youtube.
+I watched a YouTube video by the channel Cow Chop.
+I watched a cute video of a girl mistaking a water heater for a robot.
+When I completed a boss in Kingdom Hearts (Ursula II) video game.","I bought my ps4, got some money and i bought my new video game.|achievement
+My best friend sent me a funny video via text message.|bonding
+I got a lot of currency in my video game, which made me really happy.|achievement
+I won a couple prizes in a video game.|achievement
+I got a new video game.|achievement",'video' is the top 10 frequently used word for leisure
+watching,64,"Watching my favorite anime shows
+i am very happy in watching movie and playing cricket
+when i watching the tv show i felt that i was all about my feelings got involved in the tv show
+I am watching my favorite show.
+Watching Futurama on Netflix
+We got to check out Moana from the library, and quite enjoyed watching the movie a couple of times.
+Watching NXT Takeover, and seeing Booby Roode defeat Shinskue Nakumara.
+Watching my favorite TV show.
+Watching the Yankees win their game
+Watching a Phillies game.  They came back to win it in the 10th inning. It was exciting.","I spent a simple evening with my husband watching a TV show and caressing his hair while doing so.|affection
+My girls and I are relaxing together and watching cartoons.|affection
+Enjoyed watching basketball and eating pizza with my husband last night.|affection
+I was watching an episode of crashing and I had a good laugh at one of the jokes on the episode.|enjoy_the_moment
+I enjoyed watching mr bean animated series with my son.|affection",'watching' is the top 11 frequently used word for leisure
+last,63,"I watched a very exciting soccer match last week.
+Had two refreshing beers last night.
+I went to a party at someone's house last night.
+I completed a game that I had been working on for the last year on and off.
+I watched a Blackhawks game last night.
+I watched a good movie last night before going to bed.
+Watching an episode Silicon Valley before falling asleep last night.
+last month i spend my time travelling to three famous temples which made me  happy
+Being able to sleep in on my last day of vacation.
+I was able to get a lot of sleep last night.","Had a dinner party last night with all members of office.|bonding
+My cat snuggled beside me last night when I was falling asleep and snored.|affection
+Hanging out with friends all day last Saturday made me really happy as well.|bonding
+My wife made a really good dinner last night|affection
+Last night we celebrated my girlfriend's mom's birthday.|affection",'last' is the top 12 frequently used word for leisure
+time,62,"I got to go get some chinese food, I hadnt had any in a long time.
+yesterday we went to queen bar. we really enjoyed after a long time.
+I had time to start on a coloring book after I came home from work.
+I was able to watch my favorite show, which I hadn't had time for in a while.
+I made a birthday trip to Las Vegas, it was also my first time in Las Vegas.
+I was happy that I was able to find the time to catch up on Mad Men last night.
+I saw a movie that I had been meaning to see for awhile but haven't had the time.
+Started a new game that I have been waiting a long time to play.
+I spent some time in the kitchen making chicken soup.
+Ended my day by taking some spare time and watching an old comedy movie I have no seen in years.","Found a full time job finally.|achievement
+I made a kimchi pancake for the first time and it wasnt so bad.|achievement
+I had a really long talk with a friend I haven't seen in a very long time.|bonding
+About a month ago my sister finally found a full time job after being unemployed for nearly a year.|affection
+It made me happy spending time with my sister and shopping.|affection",'time' is the top 13 frequently used word for leisure
+tv,59,"my favorite show came back on tv for a new season.
+I watched a new TV program that was great.
+I watched a TV show that was very good.
+I was able to sit down and relax while watching my favorite TV show, House of Cards.
+I had time to watch three of my favorite tv shows last night.
+I discovered a new to me TV series to binge watch and still have at least a week's more viewing.
+Watching my favorite Saturday TV shows
+Baseball season started this weekend and baseball is back on tv!
+My favorite TV show (Rick and Morty) had a surprise debut on April Fool's Day.
+My favorite tv show is on tonight!!","I spent some time with my wife last night talking and watching tv.|affection
+i won a tv from a raffle. i never win so i was quite surprised|achievement
+I was able to watch one of my favorite TV shows last night with my wife before bed.|affection
+I talked a friend in to watching my favorite tv show, Wentworth.|bonding
+I built a TV stand that I recently purchased from scratch with my significant other.|achievement",'tv' is the top 14 frequently used word for leisure
+good,58,"I ate dunkin donuts and it was pretty good
+I watched a movie I wanted to see for awhile (Hacksaw Ridge) and it was very good.
+I read a good book.
+Eating some good ice cream
+I saw a good movie today.
+I watched a good movie last night before going to bed.
+I watched a good show.
+I watched a good movie on DVD
+Watching a movie that I'd never heard of which turned out to be really good.
+Watched a few episodes of The Get Down. Good show so far","We shifted to a new home and good environment.|achievement
+Eric came over and we had really good sex.|affection
+Had a good sex with my husband|affection
+I attended the sweetest wedding of a former co-worker and good friend.|bonding
+I made really good money in tips one day at work.|achievement",'good' is the top 15 frequently used word for leisure
+made,56,"Traveling to Alabama to visit a casino made me happy.
+Going to starbucks and drinking a latte made me happy.
+I made a steak and ate it for dinner.
+One event that made me happy was when I was able to reach a certain threshold in my video game.
+I made plans to go to Disney this weekend.
+I made myself a tasty dinner last night.
+I made a cup of coffee for myself this morning.
+We made plans to go to a movie tomorrow.
+I got a modification to a video game I made to work.
+Made some plans for my birthday coming up.","Celebrating my brother's birthday made me happy.|affection
+My husband made me happy this morning when he kissed me goodbye before going to work.|affection
+Getting a good night sleep made me happy.|enjoy_the_moment
+Pushing my son in his toy car and seeing him smile & laugh while doing so made me very happy.|affection
+One event that made me happy was when I gave my lunch to a homeless man in need.|enjoy_the_moment",'made' is the top 16 frequently used word for leisure
+really,55,"I ate a really good burger from a local restaurant that I had never tried before.
+Went to the cinema to watch Logan, it's really a great movie, I loved it.
+I ate really delicious paella.
+I was able to get a name I really wanted in a videogame called League of Legends.
+I got a new game on my phone and really enjoy it
+I tried my new rollerblades in the park and they worked really well.
+Colorado Rockies have been playing really good baseball this year.
+I bought and ate a type of decadent chocolate cupcake that I really love.
+I watched a really good movie today.
+I listened to a new song that I really liked.","I made really good money in tips one day at work.|achievement
+I tried a new shampoo and conditioner and I really like the way my hair smells.|achievement
+Yesterday I was accepted to an internship position that I was really hoping to get.|achievement
+I went on a date the other night and it went really well, she was super cute!|affection
+I had a really good feeling workout at the gym.|exercise",'really' is the top 17 frequently used word for leisure
+watch,53,"I am going to watch new film Bahubali
+I got to watch my favorite movie when I came home yesterday.
+I was very glad when I was able to watch an ending to a movie yesterday.
+I was able to watch a new episode of my favorite show
+I was able to watch the baseball game that I recorded this past Sunday.
+I watch some spiritual speeches on television. I felt calm and happy after hearing the thing.
+When I was finally able to watch the movie, Fallen.
+I'm finally getting to watch the movie, ""Sing!"".
+abc season end show will be good to watch
+I was able to watch a fantasy movie I wanted to watch for some time.","When I made an impromptu visit to my friend's house to watch a concert dvd.|bonding
+My wife bought a new watch that I wanted.|affection
+I love go to a stadium with my sons to watch the Football game|affection
+My brother came from abroad and he give me a watch|affection
+Being invited to go out and watch some movies with a group of strangers and a friend.|bonding",'watch' is the top 18 frequently used word for leisure
+night,45,"I got home last night and played my favorite video game for hours.
+I watched the season finale of Saturday Night Live and it made me laugh quite a bit.
+I went to see the Fifth  Element 20th anniversary replay in the theater last night.
+I watched a good movie last night before going to bed.
+I discovered a new television show last night that I enjoyed great(""The Magicans"")
+the festival night at home
+Watching the Cubs opening day game last night even though they lost.
+I ate some good egg fried rice that I got with a meal late last night.
+Watching an episode Silicon Valley before falling asleep last night.
+I meditated last night.","Real won 4-2 against Atletico. Let Go Real, Hala madrid. Amazing night with happy scores|enjoy_the_moment
+My son was able to stay with me last night.|affection
+My 3 year old niece hugged me and told me she loved me before she went home last night.|affection
+I was able to get a full night's sleep last night, which hasn't been happening too much lately.|enjoy_the_moment
+My dog stayed by me all night to sleep.|affection",'night' is the top 19 frequently used word for leisure
+playing,45,"Playing boardgames with a Meetup group
+I found something unexpected in a video game I am playing.
+I was playing an online competitive videogame and I won the match.
+Playing miniature golf
+Did well in the videogame I was playing
+WHEN I PLAYING CRICKET,FOOT BALL.. AND EVERY HOLLIDAYS
+I was playing in a role playing game and I stunned a guy at a critical time.
+I brought in a card game to try playing with my client and he enjoyed it.
+Playing video games with my nephew
+Colorado Rockies have been playing really good baseball this year.","My friend's family has a new swimming pool and we had a great time playing in it with their 2 dogs.|bonding
+Playing with my cat|affection
+I won $300 playing blackjack online.|achievement
+A friend told me she liked the music I was playing.|bonding
+Playing outside with my kids at my parents house.|affection",'playing' is the top 20 frequently used word for leisure

@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divBA68P7UVNOIQZTS"></div>
+        <div class="lime top_div" id="top_div6LRZZWRE0S50PKZ"></div>
         
         <script>
-        var top_div = d3.select('#top_divBA68P7UVNOIQZTS').classed('lime top_div', true);
+        var top_div = d3.select('#top_div6LRZZWRE0S50PKZ').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.964441457180743, 0.013212719533377678, 0.004069937768919908, 0.0050990982705668274, 0.0031752613741737328, 0.008294176130025607, 0.0017073497421931612]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.007405394037573443, 0.9365046096649939, 0.04956760337508897, 0.004042500117583876, 0.0009410403902436374, 0.0006993168626745572, 0.0008395355518413956]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["passed", 0.22198872360523175], ["test", 0.05519376339657417], ["school", 0.017461813911352018], ["difficult", -0.010806864012604707], ["in", 0.010238518364300118], ["a", 0.0026071739254865055], ["i", 0.002529974993588842]], 0, exp_div);
+                exp.show([["son", 0.6984432374791101], ["my", 0.2761684272891257], ["chat", -0.10966956377262525], ["nice", -0.06407677709727455], ["had", -0.06222300961239289], ["about", -0.05305288125002105], ["the", -0.04103856039323591]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["passed", 2, 0.22198872360523175], ["test", 21, 0.05519376339657417], ["school", 29, 0.017461813911352018], ["difficult", 11, -0.010806864012604707], ["in", 26, 0.010238518364300118], ["a", 9, 0.0026071739254865055], ["i", 0, 0.002529974993588842]], 0, "i passed a difficult test in school.", raw_div, true);
+            exp.show_raw_text([["son", 26, 0.6984432374791101], ["my", 23, 0.2761684272891257], ["chat", 13, -0.10966956377262525], ["nice", 8, -0.06407677709727455], ["had", 2, -0.06222300961239289], ["about", 30, -0.05305288125002105], ["the", 36, -0.04103856039323591]], 1, "i had a nice chat with my son about the alphabets.", raw_div, true);
             
         </script>
         </body></html>
