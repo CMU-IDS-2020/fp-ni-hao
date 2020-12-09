@@ -429,8 +429,11 @@
       }
     }
 
-    #section05 a {
+    #section05 a.barchart {
       margin-top: 40px;
+    }
+    #section05 a.nextsec {
+      padding-top: 60px;
     }
     #section05 a span {
       position: absolute;
@@ -625,7 +628,6 @@
     }
     #barchart-button {
             background-color: #612913;
-            /* Green */
             position: relative;
             padding: 5px;
             border-radius: 8px;
@@ -650,7 +652,6 @@
       margin: 4px 2px;
       opacity: 0.6;
       transition: 0.3s;
-      display: inline-block;
       text-decoration: none;
       cursor: pointer;
     }
@@ -883,7 +884,7 @@
       <b class = "sec2_text">bonding 🤝, affection 🥰, achievement 🎉, nature 🌲, leisure 😎, exercise 🏋️ and enjoy the moment 😮</b>
       <p class = "sec2_text">In the next section, you will get the chance to explore the sources of happiness for different sentences by yourself🎉</p>
     </center>
-    <a href="#section05"><span></span></a>
+    <a href="#section05" class="nextsec"><span></span></a>
 
   </section>
 
@@ -906,7 +907,7 @@
           <td width="250px">
             <p> <b>Which source of happiness?</b> </p>
             {% for i in range(0,7) %}
-                <input type="radio" id = "{{i}}" value="{{label_intdic[i]}}" name="{{label_intdic[i]}}">
+                <input type="radio" id = "{{i}}" value="{{label_intdic[i]}}" name="radio">
                 <label for="i">{{label_intdic[i]}}</label><br>
             {% endfor %}
             
@@ -953,14 +954,11 @@
             <p> Your selected words are <span id="result_words"></span>. </p>
             <p> You think the source of happiness for this sentence is <span id="checked_label">. </span></p>
             <p> <br>Do you see anything interesting? Do you find any correlations between highlighted words and the final output?🤔 Keep playing!</p>
-            <a href="{{ url_for('show_barchart') }}" id="barchart-button"> Nah I'm done with this, show me something else! </a> 
+            <a href="{{ url_for('show_barchart') }}" id="barchart-button" class="barchart"> Nah I'm done with this, show me something else! </a> 
           </td>
         </tr>
 
       </table>
-      <div>
-      </div>
-
     </div>
     
     <script>
@@ -1078,7 +1076,7 @@
       }
     </script>
     
-    <a href="#section06"><span></span></a>
+    <a href="#section06" class="nextsec"><span></span></a>
   </section>
   
   <section id="section06" class="demo">
@@ -1086,7 +1084,7 @@
       <br></br>
       <h1 class = "typewriter"> Santa's Secret</h1>
     </center>
-    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="60%" width="60%"></center>
+    <center><img src="{{url_for('static', filename='/images/model_structure.png')}}" height="50%" width="50%"></center>
     <center> <p class = "sec6_text">Surprise! It's 🤖 acting as Santa.</p> </center>
     <p class = "sec6_text2" style="margin-left: 60px;"> To perform well on happiness source prediction, 🤖 learned by:</p>
     <ul class = "sec6_text2" style="margin-left: 90px;">
@@ -1112,7 +1110,7 @@
     <center>
       <br></br>
       <h1 class = "typewriter2" style="font-size: 30px;"> 🍪 Christmas Cookie! 🍪</h1>
-      <h1 class = "typewriter2"> 🥰 Does this sentence sound happy or unhappy? 🥰</h1>
+      <h1 class = "typewriter2"> Does this sentence sound happy or unhappy?</h1>
       <!-- <h2 class = "typewriter3"> Click 'Yes' button -> compare your choice with model's choice  </h2> -->
       <!-- <h2 class = "typewriter3"> Click 'switch' button -> try another one!  </h2> -->
     </center>
@@ -1131,9 +1129,9 @@
           </td>
           <td width="250px">
             <p> <b>Positive or negative sentiment?</b> </p>          
-            <input type="radio" id = "s_0" value="unhappy" name="unhappy">
+            <input type="radio" id = "s_0" value="unhappy" name="radio">
             <label for="s_0">unhappy</label><br>
-            <input type="radio" id = "s_1" value="happy" name="happy">
+            <input type="radio" id = "s_1" value="happy" name="radio">
             <label for="s_1">happy</label><br>
             
           </td>

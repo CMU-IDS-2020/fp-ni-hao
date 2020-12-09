@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div4KUPWHVNWAH2TXG"></div>
+        <div class="lime top_div" id="top_divJ7TYV4COIP7H1GG"></div>
         
         <script>
-        var top_div = d3.select('#top_div4KUPWHVNWAH2TXG').classed('lime top_div', true);
+        var top_div = d3.select('#top_divJ7TYV4COIP7H1GG').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.9866095467142942, 0.001581434589507292, 0.00041231211166967017, 0.006673474723647091, 0.0007099522813694631, 0.0023160114050125823, 0.0016972681744995186]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.8509259882585718, 0.02335292639150971, 0.03178422969378955, 0.02036517926243139, 0.05159717851314092, 0.01576448731764614, 0.006210010562910708]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["prize", 0.10160774228750356], ["tournament", 0.08595697757075141], ["won", 0.07967858593947809], ["the", -0.06854821743803828], ["in", 0.027401558603767567]], 0, exp_div);
+                exp.show([["exam", 0.17613250305924108], ["felt", -0.14667464519854334], ["for", 0.12364036636268126], ["one", 0.11044808709022723], ["of", 0.07662531664755876]], 0, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["prize", 16, 0.10160774228750356], ["tournament", 37, 0.08595697757075141], ["won", 2, 0.07967858593947809], ["the", 6, -0.06854821743803828], ["in", 22, 0.027401558603767567]], 0, "i won the first prize in a badminton tournament.", raw_div, true);
+            exp.show_raw_text([["exam", 14, 0.17613250305924108], ["felt", 59, -0.14667464519854334], ["felt", 155, -0.14667464519854334], ["for", 19, 0.12364036636268126], ["one", 23, 0.11044808709022723], ["of", 27, 0.07662531664755876]], 0, "i had a final exam for one of my classes the other day and felt very good about how i answered the questions. others seemed to have problems with it but i felt confident i did well.", raw_div, true);
             
         </script>
         </body></html>
