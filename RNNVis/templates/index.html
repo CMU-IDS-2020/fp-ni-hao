@@ -629,19 +629,16 @@
     #barchart-button {
             background-color: #612913;
             position: relative;
-            padding: 5px;
+            padding: 10px;
             border-radius: 8px;
             font: normal 400 10px/1 'chalkduster', fantasy;
-            border: none;
             color: white;
-            /* padding: 5px 5px; */
             text-align: center;
             text-decoration: none;
-            /* display: inline-block;  */
+            display: inline-block; 
             font-size: 16px;
-            left: 0px;
         }
-    #barchart-button:hover {opacity: 1}
+    #barchart-button:hover {background-color: rgb(228, 172, 124); }
     .button{
       background-color: #8E9AAF;
       border: none;
@@ -847,10 +844,12 @@
             <button type=submit class = 'search-btn'><i class="fas fa-search"></i></button>
         </form>
       </div>
-      {% if  search_query %}
-        <h2 class = "search-result" style="color: gray;">Happiness source of '{{search_query}}' might be <span style="color: black;">{{search_label}}</span>.</h2>  
-        {% endif %}
+
     <h2 class = "search-result" ><span style="color: green;">Christ</span><span style="color: red;">mas</span> is coming! A good time to summarize your 2020 experience.</h2>
+    <br>
+    {% if  search_query %}
+    <h2 class = "search-result" style="color: black;">Happiness source of '{{search_query}}' might be: <span style="color: black;"><strong>{{search_label}}</strong></span>.</h2>  
+    {% endif %}
 
     </center>
     <img id="firstpage" src="https://www.linkpicture.com/q/FirstPage_cut.jpg" height="38%" width="45%" >
@@ -954,7 +953,7 @@
             <p> Your selected words are <span id="result_words"></span>. </p>
             <p> You think the source of happiness for this sentence is <span id="checked_label">. </span></p>
             <p> <br>Do you see anything interesting? Do you find any correlations between highlighted words and the final output?🤔 Keep playing!</p>
-            <a href="{{ url_for('show_barchart') }}" id="barchart-button" class="barchart"> Nah I'm done with this, show me something else! </a> 
+           <a href="{{ url_for('show_barchart') }}" id="barchart-button" class="barchart"> Nah I'm done with this, show me something else! </a> 
           </td>
         </tr>
 
