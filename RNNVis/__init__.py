@@ -26,4 +26,3 @@ app.config.from_envvar('RNNVIS_SETTINGS', silent=True)
 # (Reference http://flask.pocoo.org/docs/patterns/packages/)  We're
 # going to tell pylint and pycodestyle to ignore this coding style violation.
 import RNNVis.views  # noqa: E402  pylint: disable=wrong-import-position
-import RNNVis.model  # noqa: E402  pylint: disable=wrong-import-position
