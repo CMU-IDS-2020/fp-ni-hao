@@ -91,7 +91,7 @@ def show_index():
     s_labeldict = {'unhappy': 0,'happy': 1}
     s_label_intdic = {0: 'unhappy', 1:'happy'}
     s_index = random.randint(0,10000)
-    s_sentence = [s_dataset["cleaned_text"][s_index]]
+    s_sentence = [s_dataset["text"][s_index]]
     s_pred = s_model.predict(s_vectorizer.transform(s_sentence))
     s_c = make_pipeline(s_vectorizer, s_model)
     s_explainer = LimeTextExplainer(class_names=s_labels)
