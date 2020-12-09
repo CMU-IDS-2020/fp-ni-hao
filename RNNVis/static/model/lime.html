@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divJ7TYV4COIP7H1GG"></div>
+        <div class="lime top_div" id="top_divQDAUX27VERRHNFW"></div>
         
         <script>
-        var top_div = d3.select('#top_divJ7TYV4COIP7H1GG').classed('lime top_div', true);
+        var top_div = d3.select('#top_divQDAUX27VERRHNFW').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.8509259882585718, 0.02335292639150971, 0.03178422969378955, 0.02036517926243139, 0.05159717851314092, 0.01576448731764614, 0.006210010562910708]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.05143229038111788, 0.014297738368267338, 0.013304635313328188, 0.9014411002261301, 0.0027376938928668983, 0.008156802137334376, 0.008629739680955074]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["exam", 0.17613250305924108], ["felt", -0.14667464519854334], ["for", 0.12364036636268126], ["one", 0.11044808709022723], ["of", 0.07662531664755876]], 0, exp_div);
+                exp.show([["enjoyed", 0.4652987539964087], ["long", 0.1592804664542873], ["several", -0.0921181036136926], ["drive", 0.09062595166157467], ["years", -0.044156188748077675]], 3, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["exam", 14, 0.17613250305924108], ["felt", 59, -0.14667464519854334], ["felt", 155, -0.14667464519854334], ["for", 19, 0.12364036636268126], ["one", 23, 0.11044808709022723], ["of", 27, 0.07662531664755876]], 0, "i had a final exam for one of my classes the other day and felt very good about how i answered the questions. others seemed to have problems with it but i felt confident i did well.", raw_div, true);
+            exp.show_raw_text([["enjoyed", 2, 0.4652987539964087], ["long", 12, 0.1592804664542873], ["several", 23, -0.0921181036136926], ["drive", 17, 0.09062595166157467], ["years", 31, -0.044156188748077675]], 3, "i enjoyed a long drive several years back.", raw_div, true);
             
         </script>
         </body></html>
