@@ -1,10 +1,10 @@
 #!/bin/bash
 # RNNVisrun
 
-if [ ! -e var/RNNVis.sqlite3 ]
-then
-  ./bin/RNNVisdb create 
-fi
+# if [ ! -e var/RNNVis.sqlite3 ]
+# then
+#   ./bin/RNNVisdb create 
+# fi
 export FLASK_DEBUG=True
 export FLASK_APP=RNNVis
 export RNNVis_SETTINGS=config.py
