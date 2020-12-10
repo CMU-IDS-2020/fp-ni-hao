@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div6BSXILH5A5HQK81"></div>
+        <div class="lime top_div" id="top_div9O9U1ZR10B30B8P"></div>
         
         <script>
-        var top_div = d3.select('#top_div6BSXILH5A5HQK81').classed('lime top_div', true);
+        var top_div = d3.select('#top_div9O9U1ZR10B30B8P').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.1395596956043469, 0.8604403043956531]);
+            var pp = new lime.PredictProba(pp_svg, ["unhappy", "happy"], [0.37297192641919474, 0.6270280735808053]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["unhappy", "happy"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["nice", 0.10399595713142933], ["session", 0.07697663913357819], ["attack", -0.04976224088665274], ["hacker", -0.03382005025821716], ["spbpuk", 0.022793371062952643]], 1, exp_div);
+                exp.show([["www", 0.19264639393751526], ["last", -0.15152126684970788], ["com", 0.09750234157527267], ["page", -0.07244566320549443], ["squeeze", 0.04636551775083664]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["nice", 18, 0.10399595713142933], ["session", 29, 0.07697663913357819], ["attack", 11, -0.04976224088665274], ["hacker", 37, -0.03382005025821716], ["spbpuk", 56, 0.022793371062952643]], 1, "zero click attack nice swear session hacker kid #spbpc #spbpuk", raw_div, true);
+            exp.show_raw_text([["www", 37, 0.19264639393751526], ["last", 4, -0.15152126684970788], ["com", 58, 0.09750234157527267], ["page", 82, -0.07244566320549443], ["page", 98, -0.07244566320549443], ["squeeze", 9, 0.04636551775083664]], 1, "The last squeeze - unsubscribed from www.imediaconnection.com newsletter, landing page had a full page banner ad ", raw_div, true);
             
         </script>
         </body></html>

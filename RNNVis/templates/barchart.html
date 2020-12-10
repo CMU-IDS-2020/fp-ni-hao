@@ -269,14 +269,14 @@
 
                         d3.select('#line1')
                             .append("text")
-                            .html(d.note + "</br> The following is 10 examples that use \'" + d.word + "\':</br></br>")
+                            .html(d.note + "</br> The following is 10 examples that use \'" + d.word + "\'.</br>Think about why and how this word is used in these examples?</br>")
 
                         var eg = d.eg.split("\n").join("</br></br>");
                         d3.select('#eg').append('text')
                             // .text()
                             .html(eg)
                         d3.select('#line2').append('text')
-                            .html("</br></br>However, there are also some cases that \'" + d.word + "\' is used for other categories!</br></br>")
+                            .html("</br></br>However, there are also some cases that \'" + d.word + "\' is used for other categories!</br>Think about how this word is used in other categories?</br> ")
 
                         var counter_eg = d.counter_eg.replaceAll("|", " [").split("\n").join("]</br></br>") + "]";
                         d3.select('#counter_eg').append('text')

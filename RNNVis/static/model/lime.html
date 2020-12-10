@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divVXWAZNBEPLTT0YI"></div>
+        <div class="lime top_div" id="top_divJ26LAQMJBOPGXIF"></div>
         
         <script>
-        var top_div = d3.select('#top_divVXWAZNBEPLTT0YI').classed('lime top_div', true);
+        var top_div = d3.select('#top_divJ26LAQMJBOPGXIF').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.0032362907701981762, 0.008936916522479355, 0.005499273781934212, 0.970363280807334, 0.00045825274057638866, 0.0056152357581779975, 0.005890749619300009]);
+            var pp = new lime.PredictProba(pp_svg, ["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"], [0.00725689210691236, 0.010304673825069924, 0.0014539588369814466, 0.9775346238019182, 0.0002792762627312695, 0.0010254821875326978, 0.002145092978854243]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["achievement", "affection", "bonding", "enjoy the moment", "exercise", "leisure", "nature"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["self", 0.09226626127231218], ["people", 0.06676259858936857], ["important", 0.05659869572769343], ["myself", 0.055466999262576616], ["traveling", 0.05537725507707022]], 3, exp_div);
+                exp.show([["happy", 0.3822335284017361], ["life", 0.11844373518443285], ["hit", 0.11226636260967465], ["moments", 0.11050272060156681], ["in", 0.08112281645870421]], 3, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["self", 375, 0.09226626127231218], ["people", 43, 0.06676259858936857], ["important", 201, 0.05659869572769343], ["myself", 359, 0.055466999262576616], ["traveling", 139, 0.05537725507707022]], 3, "it's never about the place. it's about the people you spend time with. i have never been much happier. whenever i went to tirupati and was traveling back to bangalore, i felt like i had failed my most important exam, maybe i was missing a train. i cried like a small baby every time i left that place. this time it was different, this time i was happy. i was myself, my true self. peace!", raw_div, true);
+            exp.show_raw_text([["happy", 17, 0.3822335284017361], ["happy", 88, 0.3822335284017361], ["life", 108, 0.11844373518443285], ["hit", 5, 0.11226636260967465], ["moments", 94, 0.11050272060156681], ["in", 102, 0.08112281645870421]], 3, "this hit made me happy today, because despite very uneventful weekend, it helps me find happy moments in my life.", raw_div, true);
             
         </script>
         </body></html>
