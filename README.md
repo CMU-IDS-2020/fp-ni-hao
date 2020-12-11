@@ -6,10 +6,15 @@
   * Liyun Tu (liyunt@andrew.cmu.edu)
   * Shengli Zhu (shengliz@andrew.cmu.edu)
   * Xi Chen (xc3@andrew.cmu.edu)
-* **Track**: Narrative
-
-## Summary Image
+* **Track**: Narrative 
+* **Summary Image**
 ![Summary Image](https://www.linkpicture.com/q/Screen-Shot-2020-12-10-at-9.06.31-PM.png)
+* **Abstract**
+* **Link to paper**
+* **Video**
+* **Running Instructions**
+* **Commentary on project process**
+
 
 ## Work distribution
 
