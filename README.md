@@ -6,14 +6,13 @@
   * Shengli Zhu (shengliz@andrew.cmu.edu)
   * Xi Chen (xc3@andrew.cmu.edu)
 * **Track**: Narrative 
-* **Summary Image**
-![Summary Image](https://www.linkpicture.com/q/Screen-Shot-2020-12-10-at-9.06.31-PM.png)
-* **Abstract**
 * **Link to paper**
-* **Video**
+* **Link to Video**
 * **Link to Application**: http://0.0.0.0:8000/ (Running locally)
-* **Commentary on project process**
 
+## Summary Image
+![Summary Image](https://www.linkpicture.com/q/Screen-Shot-2020-12-10-at-9.06.31-PM.png)
+## Abstract
 
 ## Work distribution
 
@@ -42,7 +41,7 @@ http://0.0.0.0:8000/
 deactivate           
 echo $PATH | tr ':' '\n'   
 
-
+## Commentary on project process**
 
 ## Deliverables
 
