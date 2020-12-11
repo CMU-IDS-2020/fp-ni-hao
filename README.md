@@ -40,10 +40,14 @@ pip install -e .
 brew install sqlite3 curl          
 ```
 Step 1 - create virtual environment [second time or later]:   
-`source env/bin/activate`
+```
+source env/bin/activate
+```
 
 **Step 2** - command to run web on localhost:       
-`./bin/RNNVisrun`   
+```
+./bin/RNNVisrun
+```
 
 **Step 3** - open local host at port 8000:        
 http://0.0.0.0:8000/    
