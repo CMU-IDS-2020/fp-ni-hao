@@ -1,5 +1,4 @@
 # CMU Interactive Data Science Final Project
-
 * **Title**: Analyzing Happy Moments
 * **Online URL**: local deployment instruction in RNNVisExe.txt, if there's problem launching locally, we can deploy the website online. 
 * **Team members**:
@@ -7,7 +6,14 @@
   * Liyun Tu (liyunt@andrew.cmu.edu)
   * Shengli Zhu (shengliz@andrew.cmu.edu)
   * Xi Chen (xc3@andrew.cmu.edu)
-* **Track**: Narrative
+* **Track**: Narrative 
+* **Summary Image**
+![Summary Image](https://www.linkpicture.com/q/Screen-Shot-2020-12-10-at-9.06.31-PM.png)
+* **Abstract**
+* **Link to paper**
+* **Video**
+* **Commentary on project process**
+
 
 ## Work distribution
 
@@ -15,8 +21,8 @@
 - Liyun: built the backend framework including preparing data and training models and added the model illustration section in the website.
 - Xiaoyu: added the interactive bar plot section in the website and recorded design review and final videos. 
 
-## Running instructions for the software (on Mac)
-Step 1 - create virtual environment and instal db [first time running our application]:       
+## Running Instructions
+**Step 1** - create virtual environment and instal db [first time running our application]:       
 rm -rf env          
 /usr/local/bin/python3 -m venv env         
 source env/bin/activate        
@@ -26,34 +32,13 @@ brew install sqlite3 curl
 Step 1 - create virtual environment [second time or later]:             
 source env/bin/activate        
 
-Step 2 - run web on localhost:       
+**Step 2** - command to run web on localhost:       
 ./bin/RNNVisrun   
 
-Step 3 - open our web interface:        
-http://0.0.0.0:8000/
+**Step 3** - open our web interface:        
+http://0.0.0.0:8000/    
 
-To deactivate virtual environment:       
-deactivate           
-echo $PATH | tr ':' '\n'           
-
-## Running instructions for the software (on Windows)
-Step 1 - create virtual environment and instal db [first time running our application]:       
-rm -rf env           
-python -m venv env          
-source activate          
-pip install -e .            
-sudo apt-get install sqlite3 curl                
-
-Step 1 - create virtual environment [second time or later]:             
-source activate        
-
-Step 2 - run web on localhost:       
-./bin/RNNVisrun   
-
-Step 3 - open our web interface:        
-http://127.0.0.1:8000/          
-
-To deactivate virtual environment:       
+**To deactivate virtual environment:**       
 deactivate           
 echo $PATH | tr ':' '\n'   
 
