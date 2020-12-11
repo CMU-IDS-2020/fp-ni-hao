@@ -1,5 +1,5 @@
 # CMU Interactive Data Science Final Project
-* **Title**: Analyzing Happy Moments
+* **Title**: Interactive Happy Moment Analysis
 * **Team members**:
   * Contact person: Xiaoyu Sun (seansun@andrew.cmu.edu)
   * Liyun Tu (liyunt@andrew.cmu.edu)
