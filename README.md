@@ -1,6 +1,6 @@
 # CMU Interactive Data Science Final Project
 
-* **Online URL**: TODO
+* **Online URL**: local deployment instruction in RNNVisExe.txt, if there's problem launching locally, we can deploy the website online. 
 * **Team members**:
   * Contact person: Xiaoyu Sun (seansun@andrew.cmu.edu)
   * Liyun Tu (liyunt@andrew.cmu.edu)
@@ -10,7 +10,9 @@
 
 ## Work distribution
 
-Update towards the end of the project.
+- Xi and ShengLi: responsible for building the entire frontend framework and creating backgound images 
+- Liyun: built the backend framework including preparing data and training models and added the model illustration section in the website.
+- Xiaoyu: added the interactive bar plot section in the website and recorded design review and final videos. 
 
 ## Deliverables
 
