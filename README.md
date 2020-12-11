@@ -32,25 +32,27 @@ The overall setting of the website would be summarizing happy experiences of 202
 
 ## Running Instructions
 **Step 1** - create virtual environment and instal db [first time running our application]:       
+```
 rm -rf env          
 /usr/local/bin/python3 -m venv env         
 source env/bin/activate        
 pip install -e .           
 brew install sqlite3 curl          
-
-Step 1 - create virtual environment [second time or later]:             
-source env/bin/activate        
+```
+Step 1 - create virtual environment [second time or later]:   
+`source env/bin/activate`
 
 **Step 2** - command to run web on localhost:       
-./bin/RNNVisrun   
+`./bin/RNNVisrun`   
 
-**Step 3** - open our web interface:        
+**Step 3** - open local host at port 8000:        
 http://0.0.0.0:8000/    
 
 **To deactivate virtual environment:**       
+```
 deactivate           
 echo $PATH | tr ':' '\n'   
-
+```
 ## Commentary on project process
 Everyone in our team was very active and has done great work! 
 
