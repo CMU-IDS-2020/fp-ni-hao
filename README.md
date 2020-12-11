@@ -9,7 +9,7 @@
 * **Link to paper**
 https://drive.google.com/file/d/1k5cUo6Blde1Kl8vwbGtFyZRE54FrXiuc/view?usp=sharing
 * **Link to Video**
-https://drive.google.com/file/d/1Hd2eFCV1_vAwmCzmMHvPVje6A7ZoLt3W/view
+https://drive.google.com/file/d/1Hd2eFCV1_vAwmCzmMHvPVje6A7ZoLt3W/view?usp=sharing
 * **Link to Application**
 http://0.0.0.0:8000/ (Running locally)
 Can deploy it online if needed
