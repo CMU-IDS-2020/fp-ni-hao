@@ -1,5 +1,5 @@
 # CMU Interactive Data Science Final Project
-
+* **Title**: Analyzing Happy Moments
 * **Online URL**: local deployment instruction in RNNVisExe.txt, if there's problem launching locally, we can deploy the website online. 
 * **Team members**:
   * Contact person: Xiaoyu Sun (seansun@andrew.cmu.edu)
@@ -7,6 +7,9 @@
   * Shengli Zhu (shengliz@andrew.cmu.edu)
   * Xi Chen (xc3@andrew.cmu.edu)
 * **Track**: Narrative
+
+## Summary Image
+![Summary Image](https://www.linkpicture.com/q/Screen-Shot-2020-12-10-at-9.06.31-PM.png)
 
 ## Work distribution
 
