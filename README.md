@@ -41,7 +41,7 @@ http://0.0.0.0:8000/
 deactivate           
 echo $PATH | tr ':' '\n'   
 
-## Commentary on project process**
+## Commentary on project process
 
 ## Deliverables
 
