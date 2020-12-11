@@ -14,7 +14,7 @@ To achieve these goals, we set several checkpoints to check for success. The mid
 
 
 
-**Old Proposal**
+**Old Proposal**            
 For this project, we will build a machine translation visualization tutorial. We will use RNN units unfolding to get a better understanding of what is happening at each step. After that, we plan to use visualization to clearly illustrate each step and make it more interactive.
 
  Based on our understanding, the existing solutions on machine translation visualizations are too hardcore for people without machine learning background to understand. Existing visualizations of RNN models are either too general or hard code for machine learning beginners. Library tutorials use plots to help explain high-level concepts but treat the training process as a black box. For instance, tutorial of tf-seq2seq model created by Google (https://google.github.io/seq2seq/) includes a gif to show the idea of encode-decode process. But this simple gif neglects details like hidden states, gate, etc., therefore is not sufficient for beginners to learn the working mechanism. Besides, there are tools specifically for visualizing RNN models. For example, Seq2Se2-Vis, a visual debugging tool for sequence-to-sequence models (http://seq2seq-vis.io/) which allows interaction with a trained seq2seq model through each stage of the translation process. However, the aim of the tool is for debugging and targets experienced users. With little text and unordered plots, the tool may fail to work beginners through the model principles.
